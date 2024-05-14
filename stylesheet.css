@@ -1,0 +1,113 @@
+body {
+  min-width: 300px;
+  max-width: 960px;
+  width: 70%;
+  margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
+  font-family: "Libre Bodoni", Georgia, "Times New Roman", Garamond, serif;
+}
+
+img {
+  min-width: 300px;
+  width: 60%;
+}
+
+p,
+blockquote,
+li,
+td {
+  font-family: "EB Garamond", "Times New Roman", Georgia, serif;
+  font-size: large;
+}
+
+blockquote {
+  border-left: 3px solid gray;
+  padding-left: 10px;
+}
+
+header {
+  border-bottom: 1px solid grey;
+  margin-bottom: 0;
+}
+
+footer {
+  border-top: 1px solid grey;
+  margin-top: 1rem;
+}
+
+.adjacentPosts {
+  border-top: 1px solid grey;
+}
+
+nav ul li,
+footer ul li {
+  display: inline;
+}
+
+nav ul {
+  padding-left: 0;
+}
+
+.archiveList {
+  width: 100%;
+}
+
+.archiveList th,
+.archiveList td {
+  padding-top: 1rem;
+}
+
+.archiveList tr:nth-child(2) > td {
+  padding-top: 0.4rem;
+}
+
+.archiveListTitle {
+  margin-bottom: 0;
+}
+
+th.archiveListYear {
+  text-align: left;
+}
+
+h2.archiveListYear {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.archiveListMonth {
+  vertical-align: top;
+  padding-top: 0.1rem;
+  width: 2rem;
+}
+
+.archiveListMonth p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.archiveListItem {
+  margin-top: 0.4rem;
+}
+
+.archiveListContent h3 {
+  font-size: x-large;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.archiveListContent p {
+  margin-top: 0.2rem;
+  margin-bottom: 0;
+}
+
+.grey {
+  color: grey;
+}
