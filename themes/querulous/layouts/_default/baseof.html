@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode `en-us` }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+  <head>
+    {{ partialCached "head.html" . .IsHome }}
+  </head>
+  <body>
+    <header id="header">
+      {{ partial "header.html" . }}
+    </header>
+
+    {{ block "main" . }}{{ end }}
+
+    <footer id="footer">
+      {{ partialCached "footer.html" . }}
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+baseURL: "https://gender.rodeo/"
+languageCode: "en-us"
+timeZone: "America/Edmonton"
+title: "Gender Rodeo"
+theme: "querulous"
+params:
+  tagline: "If you can't stand the heat..."
+  copyline: "Gender Rodeo 2025."
+taxonomies:
+  tag: tags
+module:
+  hugoVersion:
+    extended: false
+    min: 0.139.4
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+        title: true
