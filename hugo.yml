@@ -1,4 +1,5 @@
 baseURL: "https://gender.rodeo/"
+languageCode: "en-US"
 timeZone: "America/Edmonton"
 title: "Gender Rodeo"
 theme: "querulous"
