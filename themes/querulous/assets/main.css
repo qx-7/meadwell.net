@@ -1,18 +1,29 @@
 :root {
-  --gr-sans: Lexend, sans-serif;
-  --gr-serif: Vollkorn, serif;
-  --gr-background: hwb(30 97% 2%);
-  --gr-midground: hwb(30 92% 5%);
-  --gr-foreground: hwb(300 5% 95%);
+  font-size: calc(12px + 0.5vw);
+  --gr-unit-text: calc(1px + 0.02vw);
 
   --gr-border: 0.15rem;
 
-  background-color: var(--gr-midground);
-  color: var(--gr-foreground);
-}
+  --gr-sans: Lexend, sans-serif;
+  --gr-serif: Vollkorn, serif;
+  --gr-main: hwb(200 0% 40%);
+  --gr-accent: hwb(350 20% 30%);
+  --gr-sub: hwb(40 1% 25%);
+  --gr-light: hwb(30 97% 2%);
+  --gr-mid: hwb(30 92% 5%);
+  --gr-dark: hwb(210 1% 75%);
+  --gr-selection: hwb(190 50% 25%);
 
-p {
-  margin: 0.8rem 0;
+  --gr-factor-dark: 50%;
+  --gr-factor-light: 30%;
+  
+  --gr-accent-dark: color-mix(in oklab, var(--gr-accent), var(--gr-dark) 40%);
+  --gr-accent-light: hwb(5 35% 10%);
+  --gr-sub-dark: color-mix(in oklab, var(--gr-sub), var(--gr-dark) var(--gr-factor-dark));
+  --gr-sub-dark: hwb(25 3% 45%);
+  --gr-sub-light: hwb(50 30% 25%);
+  --gr-main-dark: color-mix(in oklab, var(--gr-main), var(--gr-dark) var(--gr-factor-dark));
+  --gr-main-light: hwb(190 20% 30%);
 }
 
 html {
@@ -26,50 +37,97 @@ body {
   display: flex;
   flex-direction: column;
   margin: auto;
-  background: var(--gr-background);
+  background: var(--gr-light);
   padding: 1rem;
+}
+
+p {
+  margin: 0.8rem 0;
+}
+
+::selection {
+  color: var(--gr-dark);
+  background-color: var(--gr-selection);
+  text-decoration-color: var(--gr-dark);
+}
+
+a {
+  color: var(--gr-accent);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--gr-sub);
 }
 
 #header,
 #footer {
-  background-color: var(--gr-background);
+  background-color: var(--gr-light);
 }
 
 #header {
   padding-bottom: 1rem;
-  border-bottom: var(--gr-border) solid var(--gr-foreground);
+  border-bottom: var(--gr-border) solid var(--gr-dark);
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   gap: 1rem;
 }
 
 #footer {
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: var(--gr-border) solid var(--gr-foreground);
+  border-top: var(--gr-border) solid var(--gr-dark);
+}
+
+#footer, #footer * {
+  color: var(--gr-main-dark);
 }
 
 #header > hgroup {
   display: flex;
+  flex-flow: row nowrap;
   gap: 1rem;
   align-items: end;
+}
+
+#header p {
+  font-family: var(--gr-serif);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--gr-accent);
+  margin: 0.3rem 0;
+}
+
+#header h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0;
+  white-space: nowrap;
+  color: var(--gr-main-dark);
+}
+
+#logo {
+  width: 4rem;
+  height: 4rem;
 }
 
 * {
   font-family: var(--gr-serif);
 }
 
-hgroup h1,
-hgroup h2,
-hgroup h3,
-hgroup h4,
-hgroup h5,
-hgroup h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--gr-sans);
 }
 
 main {
-  font-size: medium;
+  --gr-scalar: 16;
+  font-size: calc(var(--gr-scalar) * var(--gr-unit-text));
 }
 
 body > .posts,
@@ -77,69 +135,137 @@ body > main {
   flex-grow: 1;
 }
 
-nav * {
+#menu > ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  gap: 0.7rem;
+  margin: 0;
+}
+
+#menu, #menu * {
   font-family: var(--gr-sans);
   font-weight: 400;
-}
-
-nav ul {
   padding: 0;
-  margin: 0;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 6px 0 6px;
-}
-
-nav ul li:first-of-type {
-  margin-left: 0;
-}
-
-nav ul li:last-of-type {
-  margin-right: 0;
-}
-
-h1 {
-  font-weight: 900;
-  font-size: xx-large;
-  margin: 1.8rem 0 0.6rem 0;
-}
-
-h2 {
+main h1 a {
+  font-family: var(--gr-sans);
   font-weight: 800;
-  font-size: x-large;
-  margin: 1.5rem 0 0.5rem 0;
+  font-size: 1.6rem;
+  margin: 1.6rem 0 0.6rem 0;
+  color: var(--gr-main);
 }
 
-h3 {
+main h1 a::before {
+  font-family: var(--gr-sans);
+  content: "# ";
+}
+
+main h1 a:hover, main h4 a:hover {
+  color: var(--gr-main-light);
+}
+
+main h2 a {
+  font-family: var(--gr-sans);
+  font-weight: 800;
+  font-size: 1.45rem;
+  margin: 1.3rem 0 0.5rem 0;
+  color: var(--gr-sub);
+}
+
+main h2 a::before {
+  font-family: var(--gr-sans);
+  content: "## ";
+}
+
+main h2 a:hover, main h5 a:hover {
+  color: var(--gr-sub-light);
+}
+
+main h3 a {
+  font-family: var(--gr-sans);
   font-weight: 700;
-  font-size: large;
-  margin: 1.3rem 0 0.4rem 0;
+  font-size: 1.25rem;
+  margin: 1.2rem 0 0.4rem 0;
+  color: var(--gr-accent);
 }
 
-h4,h5,h6,figcaption {
-  font-weight: 600;
-  font-size: medium;
-  margin: 1.3rem 0 0.4rem 0;
+main h3 a::before {
+  font-family: var(--gr-sans);
+  content: "### ";
 }
 
-hgroup > span > p {
+main h3 a:hover, main h6 a:hover {
+  color: var(--gr-accent-light);
+}
+
+main h4 a {
+  font-family: var(--gr-serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 1.2rem 0 0.4rem 0;
+  color: var(--gr-main);
+}
+
+main h4 a::before {
+  font-family: var(--gr-sans);
+  content: "#### ";
+}
+
+main h5 a {
   font-family: var(--gr-serif);
   font-weight: 600;
-  font-size: large;
-  margin: 0.3rem 0;
+  font-size: 1.15rem;
+  margin: 1.2rem 0 0.4rem 0;
+  color: var(--gr-sub);
 }
 
-hgroup > span > h1 {
-  font-size: 3rem;
-  margin: 0;
+main h5 a::before {
+  font-family: var(--gr-sans);
+  content: "##### ";
 }
 
-main > article > header > p,
-main > article > header > p * {
+main h6 a {
+  font-family: var(--gr-serif);
+  font-weight: 500;
+  font-size: 1.15rem;
+  margin: 1.2rem 0 0.4rem 0;
+  color: var(--gr-accent);
+}
+
+main h6 a::before {
+  font-family: var(--gr-sans);
+  content: "###### ";
+}
+
+main p {
+  color: var(--gr-dark);
+}
+
+.posts #main-header hgroup p, .posts #main-header hgroup p * {
+  --gr-scalar: 14;
+  font-size: calc(var(--gr-scalar) * var(--gr-unit-text));
+  color: var(--gr-accent-dark);
+  margin: calc(var(--gr-scalar) * var(--gr-unit-text) * 0.6) 0 0 0;
+}
+
+.pubdate,
+.pubdate * {
   font-family: var(--gr-sans);
   font-weight: 500;
-  font-size: small;
+  font-size: 0.75rem;
+  color: var(--gr-sub-dark);
   margin: 0.6rem 0 1.4rem 0;
+}
+
+#main-header h1 {
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: var(--gr-accent);
+  margin: 1.4rem 0 0.5rem 0;
+}
+
+#main-header h1::before {
+  content: "";
 }

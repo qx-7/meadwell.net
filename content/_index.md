@@ -1,5 +1,5 @@
 ---
-title: "🏡 Home"
+title: "Home"
 menus:
   main:
     weight: 10

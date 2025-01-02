@@ -1,5 +1,5 @@
 ---
-title: "📰 Posts"
+title: "Posts"
 menus:
   main:
     weight: 20

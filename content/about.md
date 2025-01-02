@@ -1,5 +1,5 @@
 ---
-title: "❓ About Me"
+title: "About"
 menus:
   main:
     weight: 99

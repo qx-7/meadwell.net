@@ -1,5 +1,5 @@
 ---
-title: "📚 Library"
+title: "Library"
 menus:
   main:
     weight: 30

@@ -2,7 +2,7 @@
 {{ $menuID := .menuID }}
 
 {{ with index site.Menus $menuID }}
-  <nav>
+  <nav id="menu">
     <ul>
       {{ partial "inline/navbar/walk.html" (dict "page" $page "menuEntries" .) }}
     </ul>

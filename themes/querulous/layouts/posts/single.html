@@ -2,7 +2,7 @@
   <article class="posts">
     <main>
       <article>
-        <header>
+        <header id="main-header">
           <hgroup>
             <h1>{{ .Title }}</h1>
             {{ if .Description }}<p>{{ .Description }}</p>{{ end }}
@@ -11,7 +11,7 @@
           {{ if .Date }}
             {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
             {{ $dateHuman := .Date | time.Format "02 Jan 2006" }}
-            <p>Published <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
+            <p class="pubdate">Published <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
           {{ end }}
         </header>
 
