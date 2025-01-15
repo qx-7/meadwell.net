@@ -4,4 +4,4 @@ TZ = "Canada/Mountain"
 
 [build]
 publish = "public"
-command = "hugo --gc --minify"
+command = "hugo --baseURL="https://gender.rodeo/" --config="hugo.yml" --gc"
