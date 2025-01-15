@@ -236,10 +236,6 @@ main p {
   margin: 1.4rem 0 0.5rem 0;
 }
 
-#main-header h1::before {
-  content: "";
-}
-
 #list {
   display: flex;
   flex-flow: column;
