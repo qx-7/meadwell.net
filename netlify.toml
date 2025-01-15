@@ -4,4 +4,4 @@ TZ = "Canada/Mountain"
 
 [build]
 publish = "public"
-command = "hugo --baseURL="https://gender.rodeo/" --config="hugo.yml" --gc"
+command = "hugo --baseURL='https://gender.rodeo/' --config='hugo.yml' --gc"
