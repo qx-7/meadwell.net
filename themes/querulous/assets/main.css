@@ -149,7 +149,7 @@ body > main {
   padding: 0;
 }
 
-main h1 a {
+main h1, main h1 * {
   font-family: var(--gr-sans);
   font-weight: 800;
   font-size: 1.6rem;
@@ -157,16 +157,11 @@ main h1 a {
   color: var(--gr-main);
 }
 
-main h1 a::before {
-  font-family: var(--gr-sans);
-  content: "# ";
-}
-
 main h1 a:hover, main h4 a:hover {
   color: var(--gr-main-light);
 }
 
-main h2 a {
+main h2, main h2 * {
   font-family: var(--gr-sans);
   font-weight: 800;
   font-size: 1.45rem;
@@ -174,16 +169,11 @@ main h2 a {
   color: var(--gr-sub);
 }
 
-main h2 a::before {
-  font-family: var(--gr-sans);
-  content: "## ";
-}
-
 main h2 a:hover, main h5 a:hover {
   color: var(--gr-sub-light);
 }
 
-main h3 a {
+main h3, main h3 * {
   font-family: var(--gr-sans);
   font-weight: 700;
   font-size: 1.25rem;
@@ -191,16 +181,11 @@ main h3 a {
   color: var(--gr-accent);
 }
 
-main h3 a::before {
-  font-family: var(--gr-sans);
-  content: "### ";
-}
-
 main h3 a:hover, main h6 a:hover {
   color: var(--gr-accent-light);
 }
 
-main h4 a {
+main h4, main h4 * {
   font-family: var(--gr-serif);
   font-weight: 700;
   font-size: 1.25rem;
@@ -208,12 +193,7 @@ main h4 a {
   color: var(--gr-main);
 }
 
-main h4 a::before {
-  font-family: var(--gr-sans);
-  content: "#### ";
-}
-
-main h5 a {
+main h5, main h5 * {
   font-family: var(--gr-serif);
   font-weight: 600;
   font-size: 1.15rem;
@@ -221,22 +201,12 @@ main h5 a {
   color: var(--gr-sub);
 }
 
-main h5 a::before {
-  font-family: var(--gr-sans);
-  content: "##### ";
-}
-
-main h6 a {
+main h6, main h6 * {
   font-family: var(--gr-serif);
   font-weight: 500;
   font-size: 1.15rem;
   margin: 1.2rem 0 0.4rem 0;
   color: var(--gr-accent);
-}
-
-main h6 a::before {
-  font-family: var(--gr-sans);
-  content: "###### ";
 }
 
 main p {
@@ -268,4 +238,33 @@ main p {
 
 #main-header h1::before {
   content: "";
+}
+
+#list {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem 0;
+}
+
+.list-group-block {
+  display:  flex;
+}
+
+.list-group-inline {
+  display: flex;
+  flex-flow: column;
+  flex: 8;
+  gap: 0.4rem;
+}
+
+.list-group-header {
+  flex: 1;
+}
+
+.list-item {
+  display: block;
+}
+
+.list-item p {
+  margin: 0.2rem 0;
 }
