@@ -1,0 +1,47 @@
+{{ define "main" }}
+  <main>
+    <article>
+      <header id="main-header">
+        <hgroup>
+          <h1>{{ .Title }}</h1>
+          {{ .Content }}
+        </hgroup>
+      </header>
+      <div id="list">
+        {{ $moSlice := slice "nul" "Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug" "Sep" "Oct" "Nov" "Dec" }}
+        {{ $section := .Page.Section }}
+        {{ range (.Page.RegularPages.GroupByDate "2006") }}
+          {{ if (where .Pages "Section" $section) }}
+            <div class="list-group-block">
+              <h2 class="list-group-header">{{ .Key }}</h2>
+              <div class="list-group-inline">
+                {{ range (.Pages.GroupByDate "1") }}
+                  {{ $moCurrent := .Key | int }}
+                  {{ $moSize := .Pages.Len }}
+                  {{ if (where .Pages "Section" $section) }}
+                    <div class="list-group-block">
+                      <h3 class="list-group-header">{{ index $moSlice $moCurrent }}</h3>
+                      <div class="list-group-inline">
+                        {{ range .Pages }}
+                          <div class="list-item">
+                            <article>
+                              {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+                              {{ $dateHuman := .Date | time.Format "02 Jan 06" }}
+                              <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+                              <p>{{ .Description }}</p>
+                              <p><time datetime="$dateMachine">{{ $dateHuman }}</time></p>
+                            </article>
+                          </div>
+                        {{ end }}
+                      </div>
+                    </div>
+                  {{ end }}
+                {{ end }}
+              </div>
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </article>
+  </main>
+{{ end }}
