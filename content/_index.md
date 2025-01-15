@@ -5,4 +5,6 @@ menus:
     weight: 10
 ---
 
-Coming soon!
+# [My name is Mel!](/about)
+
+This is my personal website. In time I will have [many posts](/posts) and [interesting reads](/library)! Stay tuned.
