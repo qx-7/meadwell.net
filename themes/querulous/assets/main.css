@@ -23,7 +23,7 @@
   --gr-accent-dark: color-mix(in oklab, var(--gr-accent), var(--gr-dark) 40%);
   --gr-accent-light: hwb(5 35% 10%);
   --gr-sub-dark: color-mix(in oklab, var(--gr-sub), var(--gr-dark) var(--gr-factor-dark));
-  --gr-sub-dark: hwb(25 3% 45%);
+  --gr-sub-dark: hwb(25 3% 35%);
   --gr-sub-light: hwb(50 30% 25%);
   --gr-main-dark: color-mix(in oklab, var(--gr-main), var(--gr-dark) var(--gr-factor-dark));
   --gr-main-light: hwb(190 20% 30%);
@@ -95,20 +95,20 @@ a:hover {
   align-items: end;
 }
 
-#header p {
-  font-family: var(--gr-serif);
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--gr-accent);
-  margin: 0.3rem 0;
-}
-
 #header h1 {
   font-size: 2rem;
   font-weight: 900;
   margin: 0;
   white-space: nowrap;
   color: var(--gr-main-dark);
+}
+
+#header p {
+  font-family: var(--gr-serif);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--gr-accent-dark);
+  margin: 0.3rem 0;
 }
 
 #logo {
