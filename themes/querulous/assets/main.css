@@ -1,6 +1,6 @@
 :root {
-  font-size: calc(12px + 0.5vw);
-  --gr-unit-text: calc(1px + 0.018vw);
+  font-size: calc(12px + 0.3vw);
+  --gr-unit-text: calc(0.9px + 0.013vw);
 
   --gr-border: 0.15rem;
 
