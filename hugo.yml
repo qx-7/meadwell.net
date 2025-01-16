@@ -4,7 +4,7 @@ timeZone: "America/Edmonton"
 title: "Gender Rodeo"
 theme: "querulous"
 params:
-  tagline: "Mel's home on the web! Now serving catfood."
+  tagline: "Stopping, dropping, and rolling since 1666"
   copyline: "Mel 2025."
 taxonomies:
   tag: tags
