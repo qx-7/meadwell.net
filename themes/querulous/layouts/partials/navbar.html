@@ -31,7 +31,7 @@
             {{ printf " %s=%q" $k $v | safeHTMLAttr }}
           {{ end }}
         {{ end -}}
-      >{{ $name }}</a>
+      ><div class="menu-button">{{ $name }}</div></a>
     </li>
   {{ end }}
 {{ end }}
