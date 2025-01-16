@@ -1,11 +1,13 @@
 {{ define "main" }}
   <main>
     <article>
-      <header id="main-header">
-        <hgroup>
-          <h1>{{ .Title }}</h1>
-        </hgroup>
-      </header>
+      {{ if .Title }}
+        <header id="main-header">
+          <hgroup>
+            <h1>{{ .Title }}</h1>
+          </hgroup>
+        </header>
+      {{ end }}
       {{ .Content }}
     </article>
   </main>
