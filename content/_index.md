@@ -8,4 +8,4 @@ menus:
 
 ## [My name is Mel.](/about)
 
-This is my personal website. In time I will have [many posts](/posts) and [interesting reads](/library)! Stay tuned.
+This is my personal website! In time I will have [many posts](/posts) and [interesting reads](/library). Stay tuned.
