@@ -1,0 +1,45 @@
+{{ define "main" }}
+  <article class="posts">
+    <main>
+      <article>
+        <header id="main-header">
+          <hgroup>
+            <h1>{{ .Title }}</h1>
+            <h2>in the <a href="/library">GR Library</a>{{ if .Page.Params.shelf }}{{ $shelf := .Page.Params.shelf }} (<a href="/library/{{ $shelf | lower }}">{{ $shelf }}</a> shelf){{ end }}</h2>
+            {{ if .Description }}<p>{{ .Description }}</p>{{ end }}
+          </hgroup>
+
+          {{ if .Date }}
+            {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+            {{ $dateHuman := .Date | time.Format "02 Jan 2006" }}
+            <p class="pubdate">Updated <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
+          {{ end }}
+        </header>
+
+        {{ .Content }}
+
+        <footer>
+          {{ partial "tags.html" (dict "tags" "tags" "page" .) }}
+        </footer>
+      </article>
+    </main>
+
+    {{ if or .NextInSection .PrevInSection }}
+      {{ $shelf := .Page.Params.shelf }}
+      <footer>
+        <div class="adjacentPosts">
+          {{ if .NextInSection }}
+            {{ with .NextInSection }}
+              <p>Next page in {{ $shelf }}: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+            {{ end }}
+          {{ end }}
+          {{ if .PrevInSection }}
+            {{ with .PrevInSection }}
+              <p>Previous page in {{ $shelf }}: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+            {{ end }}
+          {{ end }}
+        </div>
+      </footer>
+    {{ end }}
+  </article>
+{{ end }}
