@@ -7,8 +7,6 @@ params:
   longTitle: "Mel Meadwell on the web"
   tagline: "Stopping, dropping, and rolling since 1666"
   copyline: "Mel Meadwell 2025."
-taxonomies:
-  tag: tags
 module:
   hugoVersion:
     extended: false
