@@ -10,7 +10,7 @@ params:
 module:
   hugoVersion:
     extended: false
-    min: 0.139.4
+    min: 0.140.2
 markup:
   goldmark:
     parser:

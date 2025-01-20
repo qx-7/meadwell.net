@@ -3,5 +3,6 @@ HUGO_VERSION = "0.140.2"
 TZ = "Canada/Mountain"
 
 [build]
+base = "meadwell.net"
 publish = "public"
-command = "hugo --baseURL='https://gender.rodeo/' --config='hugo.yml' --gc"
+command = "hugo --gc"
