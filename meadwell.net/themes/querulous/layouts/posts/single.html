@@ -1,0 +1,46 @@
+{{ define "main" }}
+  <article class="posts">
+    <main>
+      <article class="h-entry">
+        <header id="main-header">
+          <hgroup>
+            <h1 class="p-name">{{ .Title }}</h1>
+            <p><a class="u-url u-uid" href="{{ .Permalink }}"></a></p>
+            {{ if .Description }}<p class="p-summary">{{ .Description }}</p>{{ end }}
+          </hgroup>
+
+          {{ if .Date }}
+            {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+            {{ $dateHuman := .Date | time.Format "02 Jan 2006" }}
+            <p class="pubdate">Published <time class="dt-published" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
+          {{ end }}
+        </header>
+
+        <div class="e-content">
+        {{ .Content }}
+        </div>
+
+        <footer>
+          {{ partial "tags.html" (dict "tags" "tags" "page" .) }}
+        </footer>
+      </article>
+    </main>
+
+    {{ if or .NextInSection .PrevInSection }}
+      <footer class="main-footer">
+        <div class="adjacentPosts">
+          {{ if .NextInSection }}
+            {{ with .NextInSection }}
+              <p>Next post: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+            {{ end }}
+          {{ end }}
+          {{ if .PrevInSection }}
+            {{ with .PrevInSection }}
+              <p>Previous post: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+            {{ end }}
+          {{ end }}
+        </div>
+      </footer>
+    {{ end }}
+  </article>
+{{ end }}

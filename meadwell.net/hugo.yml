@@ -1,0 +1,21 @@
+baseURL: "https://meadwell.net/"
+languageCode: "en-US"
+timeZone: "America/Edmonton"
+title: "Meadwell.net"
+theme: "querulous"
+params:
+  longTitle: "Mel Meadwell on the web"
+  tagline: "Stopping, dropping, and rolling since 1666"
+  copyline: "Mel Meadwell 2025."
+taxonomies:
+  tag: tags
+module:
+  hugoVersion:
+    extended: false
+    min: 0.139.4
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+        title: true

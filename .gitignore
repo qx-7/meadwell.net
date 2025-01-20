@@ -1,10 +1,10 @@
-public/
+meadwell.net/public/
 .hugo_build.lock
 .vscode/
 *.md.backup
-content/posts/2024/01/other-test.md
-content/posts/2024/08/aug-test.md
-content/posts/2024/11/nov-test.md
-content/posts/2025/01/other-test.md
-content/posts/2025/01/testing-content.md
-content/library/testing/
+meadwell.net/content/posts/2024/01/other-test.md
+meadwell.net/content/posts/2024/08/aug-test.md
+meadwell.net/content/posts/2024/11/nov-test.md
+meadwell.net/content/posts/2025/01/other-test.md
+meadwell.net/content/posts/2025/01/testing-content.md
+meadwell.net/content/library/testing/

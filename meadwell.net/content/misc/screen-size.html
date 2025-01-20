@@ -1,0 +1,37 @@
+---
+title: "Screen Size"
+---
+
+<style>
+  @property --_w {
+    syntax: '<length>';
+    inherits: true;
+    initial-value: 100vw; 
+  }
+  @property --_h {
+    syntax: '<length>';
+    inherits: true;
+    initial-value: 100vh; 
+  }
+  :root {
+    --w: tan(atan2(var(--_w),1px)); /* screen width */
+    --h: tan(atan2(var(--_h),1px)); /* screen height*/
+    /* The result is an integer without unit  */
+  }
+  #screen-size:before {
+    content: counter(w) "x" counter(h);
+    counter-reset: h var(--h) w var(--w);
+    font-size: 50px;
+    font-weight: 900;
+    position: fixed;
+    inset: 0;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    color: var(--qx-background);
+    background: var(--qx-foreground);
+    border-radius: 20px;
+    padding: 20px;
+  }
+</style>
+<p id="screen-size">Taken from <a href="https://css-tip.com/screen-dimension/">css-tip.com</a></p>

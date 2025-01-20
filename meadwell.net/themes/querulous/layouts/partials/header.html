@@ -1,0 +1,11 @@
+{{ partial "navbar.html" (dict "menuID" "main" "page" .) }}
+<hgroup>
+  <!--
+  <img id="logo" src="/logo.png" alt="Site logo" height="100px" width="100px" />
+  -->
+  <img id="logo" src="/favicon.svg" alt="Site logo" height="100px" width="100px" />
+  <span>
+    <h1>{{ .Site.Param "longTitle" }}</h1>
+    <p>{{ .Site.Param "tagline" }}</p>
+  </span>
+</hgroup>
