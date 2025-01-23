@@ -13,7 +13,7 @@
         {{ $dateMachine := .t | time.Format "2006-01-02T15:04:05-07:00" }}
         {{ $dateHuman := .t | time.Format "2006-Jan-02 15:04" }}
         {{ $dateURL := .t | time.Format "2006-01-02-1504" }}
-        <p class="quip-t" id="{{ $dateURL }}"><a href="{{ .Site.BaseURL }}#{{ $dateURL }}"><time class="dt-published" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></a></p>
+        <p class="quip-t" id="{{ $dateURL }}"><a class="u-url" href="{{ .Site.BaseURL }}#{{ $dateURL }}"><time class="dt-published" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></a></p>
         <p class="quip-q">{{ .q }}</p>
       </article>
     {{ end }}
