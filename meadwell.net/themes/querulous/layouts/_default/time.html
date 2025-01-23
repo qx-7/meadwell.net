@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main>
+  <article>
+    {{ if .Title }}
+      <header id="main-header">
+        <hgroup>
+          <h1>{{ .Title }}</h1>
+        </hgroup>
+      </header>
+    {{ end }}
+    {{ .Content }}
+    <p><code style="font-weight: 900; font-size: larger"><time datetime="{{ time.Now | time.Format `2006-01-02T15:04:05-07:00` }}">{{ time.Now | time.Format "2006-01-02T15:04:05-0700" }}</time></code></p>
+  </article>
+</main>
+{{ end }}
