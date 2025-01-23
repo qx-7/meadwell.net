@@ -4,6 +4,7 @@
   --qx-unit-text: calc(0.9px + 0.013vw);
   --qx-sans: Lexend, sans-serif;
   --qx-serif: Vollkorn, serif;
+  --qx-mono: Inconsolata, monospace;
 
   /* COLORS */
   --qx-main-darker: hsl(190, 40%, 25%);
@@ -69,6 +70,7 @@
   /* NAV MENU */
   --qx-menu-link-color: var(--qx-main-mid);
   --qx-menu-link-hover: var(--qx-main-fore);
+  --qx-menu-background-active: var(--qx-midground);
   --qx-menu-background-hover: var(--qx-midground);
 
   /* SITE HEADER & FOOTER */
@@ -123,14 +125,20 @@
   --qx-list-title-decoration: underline;
 }
 
+* {
+  font: inherit;
+}
+
 html {
   padding: 1rem 0;
+  font-family: var(--qx-serif);
+  font-weight: 500;
 }
 
 body {
   min-width: 300px;
   max-width: 960px;
-  width: 70%;
+  width: 85%;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -140,6 +148,10 @@ body {
 
 p {
   margin: 0.8rem 0;
+}
+
+code {
+  font: 600 1em var(--qx-mono);
 }
 
 ::selection {
@@ -201,13 +213,12 @@ a:hover {
   font-size: 2rem;
   font-weight: 900;
   margin: 0;
-  white-space: nowrap;
   color: var(--qx-header-title);
 }
 
-#header p {
-  font-family: var(--qx-serif);
-  font-weight: 700;
+#header p, #header p * { /* tagline */
+  font-family: var(--qx-mono);
+  font-weight: 600;
   font-size: 1rem;
   color: var(--qx-header-tagline-color);
   margin: 0.3rem 0;
@@ -216,11 +227,6 @@ a:hover {
 #logo {
   width: 4rem;
   height: 4rem;
-}
-
-* {
-  font-family: var(--qx-serif);
-  font-weight: 500;
 }
 
 h1,
@@ -259,6 +265,10 @@ body > main {
 #menu div {
   border-radius: 0.6rem;
   padding: 0.3rem 0.5rem;
+}
+
+#menu .active div {
+  background: var(--qx-menu-background-active);
 }
 
 #menu div:hover {
