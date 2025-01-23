@@ -6,6 +6,7 @@
   <img id="logo" src="/favicon.svg" alt="Site logo" height="100px" width="100px" />
   <span>
     <h1>{{ .Site.Param "longTitle" }}</h1>
-    <p>{{ .Site.Param "tagline" }}</p>
+    <!-- <p>{{ .Site.Param "tagline" }}</p> -->
+    <p class="tagline"><a href="/quips">{{ range sort .Site.Data.quips "t" | last 1 }}{{ .q }}{{ end }}</a></p>
   </span>
 </hgroup>
