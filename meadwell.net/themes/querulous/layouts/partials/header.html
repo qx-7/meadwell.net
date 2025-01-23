@@ -7,6 +7,9 @@
   <span>
     <h1>{{ .Site.Param "longTitle" }}</h1>
     <!-- <p>{{ .Site.Param "tagline" }}</p> -->
+
+    <!-- todo: fix this mess, and maybe add a character limit via shortcode?? --
+    so that long quips don't totally throw off the layout of the site -->
     {{ range sort .Site.Data.quips "t" | last 1 }}
       {{ $dateMachine := .t | time.Format "2006-01-02T15:04:05-07:00" }}
       {{ $dateHuman := .t | time.Format "2006-Jan-02 15:04" }}
