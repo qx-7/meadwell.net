@@ -7,6 +7,11 @@
   <span>
     <h1>{{ .Site.Param "longTitle" }}</h1>
     <!-- <p>{{ .Site.Param "tagline" }}</p> -->
-    <p class="tagline"><a href="/quips">{{ range sort .Site.Data.quips "t" | last 1 }}{{ .q }}{{ end }}</a></p>
+    {{ range sort .Site.Data.quips "t" | last 1 }}
+      {{ $dateMachine := .t | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman := .t | time.Format "2006-Jan-02 15:04" }}
+      {{ $dateURL := .t | time.Format "2006-01-02-1504" }}
+      <p class="tagline"><a href="/status#{{ $dateURL }}"><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></a>: {{ .q }}</p>
+    {{ end }}
   </span>
 </hgroup>
