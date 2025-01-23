@@ -184,24 +184,6 @@ a:hover {
   gap: 1rem;
 }
 
-#footer {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: var(--qx-border-width) solid var(--qx-border-color);
-}
-
-#footer, #footer p {
-  color: var(--qx-footer-color);
-}
-
-#footer a {
-  color: var(--qx-footer-anchor-color);
-}
-
-#footer a:hover {
-  color: var(--qx-footer-anchor-hover-color);
-}
-
 #header > hgroup {
   display: flex;
   flex-flow: row nowrap;
@@ -222,6 +204,24 @@ a:hover {
   font-size: 1rem;
   color: var(--qx-header-tagline-color);
   margin: 0.3rem 0;
+}
+
+#footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: var(--qx-border-width) solid var(--qx-border-color);
+}
+
+#footer, #footer p {
+  color: var(--qx-footer-color);
+}
+
+#footer a {
+  color: var(--qx-footer-anchor-color);
+}
+
+#footer a:hover {
+  color: var(--qx-footer-anchor-hover-color);
 }
 
 #logo {
