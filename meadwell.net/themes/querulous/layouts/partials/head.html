@@ -8,4 +8,4 @@
 {{ partialCached "style.html" . }}
 {{ if eq .LinkTitle "Status" }}{{ partialCached "style_quips.html" . }}{{ end }}
 
-{{ partial "head-custom.html" . }}
+{{ partialCached "head-custom.html" . .IsHome }}
