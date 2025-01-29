@@ -120,6 +120,7 @@
   --qx-list-title-color: var(--qx-accent-mid);
   --qx-list-title-hover-color: var(--qx-accent-fore);
   --qx-list-item-hover-color: var(--qx-midground);
+  --qx-list-item-desc-color: var(--qx-foreground);
   --qx-list-item-date-color: var(--qx-accent-fore);
   --qx-list-item-date-hover-color: var(--qx-accent-fore);
   --qx-list-title-decoration: underline;
@@ -133,6 +134,7 @@ html {
   padding: 1rem 0;
   font-family: var(--qx-serif);
   font-weight: 500;
+  color: var(--qx-foreground);
 }
 
 body {
@@ -146,7 +148,7 @@ body {
   padding: 1rem;
 }
 
-p {
+p, ul, ol, figure {
   margin: 0.8rem 0;
 }
 
@@ -245,6 +247,7 @@ h6 {
 main {
   --qx-scalar: 16;
   font-size: calc(var(--qx-scalar) * var(--qx-unit-text));
+  color: var(--qx-foreground);
 }
 
 body > .posts,
@@ -295,6 +298,9 @@ main h6 * {
   font-size: inherit;
   color: inherit;
 }
+
+/* Note: do not use <h1> in <main>!!
+Every page document will already have an <h1> for the site title. */
 
 main h2 {
   font-family: var(--qx-serif);
@@ -376,10 +382,6 @@ main h6 a:hover {
   color: var(--qx-main-h6-anchor-hover-color);
 }
 
-main p {
-  color: var(--qx-foreground);
-}
-
 #main-header hgroup p, #main-header hgroup p * {
   font-weight: 600;
   --qx-scalar: 15;
@@ -457,7 +459,7 @@ main p {
 h2.list-heading {
   font-family: var(--qx-serif);
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--qx-posts-year-color);
 }
 
@@ -465,7 +467,7 @@ h2.list-heading {
 h3.list-heading {
   font-family: var(--qx-serif);
   font-size: 1.45rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--qx-posts-month-color);
 }
 
@@ -475,6 +477,8 @@ h3.list-heading {
 
 .list-item p {
   margin: 0.2rem 0;
+  color: var(--qx-list-item-desc-color);
+  font-weight: 600;
 }
 
 .list-item time {
@@ -496,6 +500,7 @@ h3.list-heading {
 .list-title {
   color: var(--qx-list-title-color);
   text-decoration: var(--qx-list-title-decoration);
+  font-weight: 900;
 }
 
 .main-footer, .main-footer * {
@@ -511,4 +516,12 @@ h3.list-heading {
 
 .main-footer a:hover {
   color: var(--qx-main-footer-anchor-hover-color);
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
 }
