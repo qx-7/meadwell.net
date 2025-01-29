@@ -1,12 +1,14 @@
 {{ define "main" }}
 <main>
-  <article>
+  <article class="h-feed">
     <header id="main-header">
       <hgroup>
-        <h1>{{ .Title }}</h1>
+        <h1 class="p-name">{{ .Title }}</h1>
       </hgroup>
     </header>
-    {{ .Content }}
+    <div class="p-summary">
+      {{ .Content }}
+    </div>
 
     {{ range sort .Site.Data.quips "t" "desc" }}
       <article class="h-entry">
