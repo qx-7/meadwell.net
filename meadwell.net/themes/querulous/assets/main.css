@@ -76,6 +76,8 @@
   /* SITE HEADER & FOOTER */
   --qx-header-title: var(--qx-main-near);
   --qx-header-tagline-color: var(--qx-main-mid);
+  --qx-tagline-anchor-color: var(--qx-accent-mid);
+  --qx-tagline-anchor-hover-color: var(--qx-accent-fore);
   --qx-footer-color: var(--qx-main-near);
   --qx-footer-anchor-color: var(--qx-accent-near);
   --qx-footer-anchor-hover-color: var(--qx-accent-fore);
@@ -200,16 +202,22 @@ a:hover {
   color: var(--qx-header-title);
 }
 
-#header p, #header p * { /* tagline */
+.tagline {
   font-family: var(--qx-mono);
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
   color: var(--qx-header-tagline-color);
   margin: 0.3rem 0;
 }
 
-#header time {
+.tagline a {
   font-weight: 800;
+  font-size: 0.95em;
+  color: var(--qx-tagline-anchor-color);
+}
+
+.tagline a:hover {
+  --qx-tagline-anchor-color: var(--qx-tagline-anchor-hover-color);
 }
 
 #footer {
