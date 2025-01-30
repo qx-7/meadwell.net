@@ -6,7 +6,7 @@ theme: "querulous"
 params:
   longTitle: "Mel Meadwell on the web"
   tagline: "Stopping, dropping, and rolling since 1666"
-  copyline: "Mel Meadwell 2025."
+copyright: "© 2025 Mel Meadwell."
 module:
   hugoVersion:
     extended: false
