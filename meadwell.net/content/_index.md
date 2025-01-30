@@ -6,10 +6,11 @@ menus:
     weight: 10
 ---
 
-## Hi! [My name is Mel.](/about)
+## Hi! My name is Mel.
 
-This is my personal website!
+This is my personal website! I've been working on it since roughly the beginning of Dec, 2024.
 
-It's still in the early stages of construction, but I have big plans...
 
-Bookmark me so you don't miss anything! Posts dropping soon. 🙏
+I'll have RSS and Atom feeds set up Very Soon™! Hopefully mid-Feb 2025 will see the full implementation of feeds 💪
+
+Go have a chuckle at my [witty statuses](/status), catch up on my [posts and articles](/posts), or sit down with a good [reading or two](/library).
