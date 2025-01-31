@@ -1,7 +1,7 @@
 ---
 title: "Blog Thoughts"
 date: 2025-01-30T02:10:15-0700
-description: "In which I discuss my thoughts about this very blog"
+description: "In which I discuss my thoughts about this very blog."
 draft: false
 ---
 
