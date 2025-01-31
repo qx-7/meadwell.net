@@ -5,6 +5,7 @@ title: "Meadwell.net"
 theme: "querulous"
 params:
   longTitle: "Mel Meadwell on the web"
+  admin: "Mel Meadwell"
   tagline: "Stopping, dropping, and rolling since 1666"
 copyright: "© 2025 Mel Meadwell."
 module:
