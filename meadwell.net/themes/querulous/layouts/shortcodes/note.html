@@ -1,0 +1,16 @@
+{{/* This shortcode used via {{< note title=[title] >}}[content]{{< /note >}}
+or simply by {{< note >}}[content]{{< /note >}} to default to title="Note".
+Can also use {{< note [title] >}}[content]{{< /note >}} for convenience. */}}
+
+{{ $title := "Note" }}
+{{ $content := "content" }}
+
+{{ with .Get 0 }}
+  {{ $title = . }}
+{{ end }}
+{{ $content = .Inner | strings.TrimSpace }}
+
+<div class="note">
+  <p><strong>{{ $title | .Page.RenderString }}</strong></p>
+  <p>{{ with . }}{{ $content | .Page.RenderString }}{{ end }}</p>
+</div>
