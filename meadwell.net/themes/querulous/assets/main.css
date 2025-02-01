@@ -15,7 +15,8 @@
   --qx-accent-dark: hsl(5, 50%, 45%);
   --qx-accent-light: hsl(5, 55%, 60%);
   --qx-accent-lighter: hsl(20, 50%, 65%);
-  --qx-selection: hsl(190, 30%, 40%);
+  --qx-selection-dark: hsl(190, 20%, 35%);
+  --qx-selection-light: hsl(190, 20%, 65%);
   --qx-light: hsl(155, 20%, 97%);
   --qx-medlight: hsl(30, 20%, 93%);
   --qx-meddark: hsl(340, 10%, 12%);
@@ -34,6 +35,7 @@
   --qx-accent-fore: var(--qx-accent-darker);
   --qx-accent-mid: var(--qx-accent-dark);
   --qx-accent-back: var(--qx-accent-light);
+  --qx-selection: var(--qx-selection-light);
 } }
   /* DARK THEME */
 @media (prefers-color-scheme: dark) { :root {
@@ -46,6 +48,7 @@
   --qx-accent-fore: var(--qx-accent-lighter);
   --qx-accent-mid: var(--qx-accent-light);
   --qx-accent-back: var(--qx-accent-dark);
+  --qx-selection: var(--qx-selection-dark);
 } }
 
 :root {
