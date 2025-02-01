@@ -129,6 +129,10 @@
   --qx-list-item-date-color: var(--qx-accent-fore);
   --qx-list-item-date-hover-color: var(--qx-accent-fore);
   --qx-list-title-decoration: underline;
+
+  /* NOTE BOX THING */
+  --qx-note-background-color: var(--qx-midground);
+  --qx-note-border-color: var(--qx-accent-mid);
 }
 
 * {
@@ -535,4 +539,20 @@ strong {
 
 em {
   font-style: italic;
+}
+
+.note {
+  --qx-width: 0.25rem;
+  background-color: var(--qx-note-background-color);
+  border-left: var(--qx-width) solid var(--qx-note-border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.2rem 1rem;
+  border-radius: var(--qx-width);
+  font-size: 0.9em;
+}
+
+.note > p {
+  margin: 0;
 }
