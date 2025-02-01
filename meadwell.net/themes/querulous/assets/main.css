@@ -21,6 +21,8 @@
   --qx-medlight: hsl(30, 20%, 93%);
   --qx-meddark: hsl(340, 10%, 12%);
   --qx-dark: hsl(220, 10%, 8%);
+
+  --qx-rainbow-color: #e26e4b;
 }
 
 /* THEMES */
@@ -57,7 +59,37 @@
   --qx-main-near: color-mix(in oklab, var(--qx-main-mid), var(--qx-main-fore));
   --qx-accent-far: color-mix(in oklab, var(--qx-accent-mid), var(--qx-accent-back));
   --qx-accent-near: color-mix(in oklab, var(--qx-accent-mid), var(--qx-accent-fore) 40%);
+}
 
+/* COLOR ANIMATED */
+@keyframes rainbow {
+  0%, 1%, 99%, 100% {
+    color: var(--qx-accent-mid);
+  }
+  11.5%, 13.5% {
+    color: #f5a6bb;
+  }
+  24%, 26% {
+    color: #8abd48;
+  }
+  36.5%, 38.5% {
+    color: #f5e35b;
+  }
+  49%, 51% {
+    color: #8848b0;
+  }
+  61.5%, 63.5% {
+    color: #6373e0;
+  }
+  74%, 76% {
+    color: #123838;
+  }
+  86.5%, 88.5% {
+    color: #99e9f0;
+  }
+}
+
+:root {
   /* LINKS */
   --qx-anchor: var(--qx-accent-mid);
   --qx-anchor-hover: var(--qx-accent-fore);
@@ -207,6 +239,7 @@ a:hover {
   font-weight: 900;
   margin: 0;
   color: var(--qx-header-title);
+  animation: 25s 1s infinite rainbow;
 }
 
 .tagline {
