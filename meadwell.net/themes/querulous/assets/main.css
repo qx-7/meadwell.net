@@ -177,9 +177,8 @@
 }
 
 html {
-  padding: 1rem 0;
   font-family: var(--qx-serif);
-  font-weight: 500;
+  font-weight: 400;
   color: var(--qx-foreground);
 }
 
@@ -211,7 +210,7 @@ code {
 a {
   color: var(--qx-anchor);
   text-decoration: underline;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 a:hover {
@@ -240,8 +239,9 @@ a:hover {
 }
 
 #header h1 {
-  font-size: 2rem;
-  font-weight: 900;
+  font-family: var(--qx-sans);
+  font-size: 1.5rem;
+  font-weight: 500;
   margin: 0;
   color: var(--qx-header-title);
   animation: 25s 1s infinite rainbow;
@@ -358,7 +358,7 @@ Every page document will already have an <h1> for the site title. */
 main h2 {
   font-family: var(--qx-serif);
   font-weight: 800;
-  font-size: 1.7em;
+  font-size: 1.6em;
   margin: 1.6rem 0 0.6rem 0;
   color: var(--qx-main-h2-color);
 }
@@ -436,7 +436,7 @@ main h6 a:hover {
 }
 
 #main-header hgroup p, #main-header hgroup p * {
-  font-weight: 600;
+  font-weight: 500;
   --qx-scalar: 15;
   font-size: calc(var(--qx-scalar) * var(--qx-unit-text));
   color: var(--qx-description-color);
@@ -455,8 +455,8 @@ main h6 a:hover {
 
 #main-header h1, #main-header h1 * {
   font-family: var(--qx-sans);
-  font-weight: 900;
-  font-size: 2.4rem;
+  font-weight: 700;
+  font-size: 2.2rem;
   color: var(--qx-main-header-h1-color);
   margin: 1.4rem 0 0.5rem 0;
 }
@@ -529,9 +529,8 @@ h3.list-heading {
 }
 
 .list-item p {
-  margin: 0.2rem 0;
   color: var(--qx-list-item-desc-color);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .list-item time {
@@ -540,7 +539,14 @@ h3.list-heading {
 
 .list-item article {
   border-radius: 1rem;
-  padding: 0.6rem;
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.list-item article > * {
+  margin: 0;
 }
 
 .list-item article:hover {
@@ -550,10 +556,12 @@ h3.list-heading {
   --qx-list-item-date-color: var(--qx-list-item-date-hover-color);
 }
 
-.list-title {
+h4.list-title {
   color: var(--qx-list-title-color);
   text-decoration: var(--qx-list-title-decoration);
-  font-weight: 900;
+  font-family: var(--qx-sans);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
 }
 
 .main-footer, .main-footer * {
@@ -572,7 +580,7 @@ h3.list-heading {
 }
 
 strong {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 em {
