@@ -8,6 +8,15 @@ params:
   admin: "Mel Meadwell"
   tagline: "Stopping, dropping, and rolling since 1666"
 copyright: "© 2025 Mel Meadwell."
+permalinks:
+  page:
+    posts: /:year/:month/post-:filename/
+    library: /:year/:month/page-:filename/
+    misc: /:year/:month/misc-:filename/
+  section:
+    posts: /posts/
+    library: /library/
+    misc: /misc/
 module:
   hugoVersion:
     extended: false
