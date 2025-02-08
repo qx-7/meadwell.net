@@ -9,7 +9,7 @@
     </header>
     {{ .Content }}
     <article id="list">
-      {{ range .Site.RegularPages.GroupByParam "shelf" }}
+      {{ range .Site.Pages.GroupByParam "shelf" }}
         <div class="list-container">
           <h2 class="list-heading">{{ .Key }}</h2>
           <div class="list-group">

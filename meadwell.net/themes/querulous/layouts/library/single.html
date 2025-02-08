@@ -5,7 +5,7 @@
         <header id="main-header">
           <hgroup>
             <h1>{{ .Title }}</h1>
-            <h2>in the <a href="/library">GR Library</a>{{ if .Page.Params.shelf }}{{ $shelf := .Page.Params.shelf }} (<a href="/library/{{ $shelf | lower }}">{{ $shelf }}</a> shelf){{ end }}</h2>
+            <h2>in <a href="/library">Mel's Library</a>{{ if .Page.Params.shelf }}{{ $shelf := .Page.Params.shelf }} (<a href="/library/{{ $shelf | lower }}">{{ $shelf }}</a> shelf){{ end }}</h2>
             {{ if .Description }}<p>{{ .Description }}</p>{{ end }}
           </hgroup>
 
