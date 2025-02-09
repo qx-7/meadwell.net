@@ -7,7 +7,7 @@ params:
   longTitle: "Mel Meadwell on the web"
   admin: "Mel Meadwell"
   tagline: "Stopping, dropping, and rolling since 1666"
-copyright: "© 2025 Mel Meadwell."
+copyright: "© 2024–2025 Mel Meadwell."
 permalinks:
   page:
     posts: /:year/:month/post-:filename/
