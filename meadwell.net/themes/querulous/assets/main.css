@@ -594,7 +594,8 @@ em {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  padding: 1.2rem 1rem;
+  padding: 0.6rem 0.4rem;
+  margin: 0.6rem 0;
   border-radius: var(--qx-width);
   font-size: 0.9em;
 }
