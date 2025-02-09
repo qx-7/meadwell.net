@@ -8,10 +8,10 @@ menus:
 
 ## Hi! My name is Mel.
 
-This is my personal website! I've been working on it since roughly the beginning of Dec, 2024.
+I'm a student in the field of religious studies. I'm interested in art, culture, and the significance of myth in society. I really enjoy reflecting on the nature of the world around me, and I *really* really enjoy discussing it with others! [More about me.](/about)
 
-My [first post](/posts/2025/01/blog-thoughts) is officially online! :D
+Check out my [posts](/posts), where I publish all sorts of thoughtful reflections!
 
-I'll have RSS and Atom feeds set up Very Soon™! Hopefully mid-Feb 2025 will see the full implementation of feeds 💪
+{{< note >}}This site is built from scratch with [Hugo](https://gohugo.io/) and a hearty portion of elbow grease. See the [site source files on GitHub](https://github.com/qx-7/meadwell.net). My theme is not currently publicly available, but I'd like to clean it up real nice for you all to use and modify someday.{{< /note >}}
 
-Go have a chuckle at my [witty statuses](/status), catch up on my [posts and articles](/posts), or sit down with a good [reading or two](/library).
+{{< note >}}I'll have RSS and Atom feeds set up Very Soon™! Hopefully mid-Feb 2025 will see the full implementation of feeds 💪{{< /note >}}
