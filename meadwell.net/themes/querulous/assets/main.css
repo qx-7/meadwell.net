@@ -238,13 +238,18 @@ a:hover {
   align-items: start;
 }
 
-#header h1 a.site-title {
+#header h1.site-title {
   font-family: var(--qx-sans);
   font-size: 1.5rem;
   font-weight: 500;
   margin: 0;
   color: var(--qx-header-title);
   animation: 25s 1s infinite rainbow;
+}
+
+#header h1.site-title a {
+  font: inherit;
+  color: inherit;
 }
 
 .tagline {
