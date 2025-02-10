@@ -59,4 +59,4 @@ Anyway, I'm not alone in my thoughts here. If the world has always been in pain,
 
 Long one today... actually, I started this one last night and picked it up again today to finish it. I hope to write much more along these lines! I have a lot of thoughts on this shit, and publishing them on here really helps me polish them up into beautiful gems of ideas!
 
-Take care of yourselves! I love you all <3
+Take care of yourselves! I love you all 💜
