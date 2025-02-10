@@ -16,7 +16,7 @@ Check out my [posts](/posts), where I publish all sorts of thoughtful reflection
 
 In which I ramble about loneliness, marginalization, and my transfem experience with in-game chat
 
-Published 2025-02-09{{< /note >}}
+Published 09 Feb 2025{{< /note >}}
 
 {{< note >}}This site is built from scratch with [Hugo](https://gohugo.io/) and a hearty portion of elbow grease. See the [site source files on GitHub](https://github.com/qx-7/meadwell.net). My theme is not currently publicly available, but I'd like to clean it up real nice for you all to use and modify someday.{{< /note >}}
 
