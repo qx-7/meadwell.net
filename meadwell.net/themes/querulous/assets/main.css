@@ -324,6 +324,8 @@ body > main {
 #menu, #menu * {
   font-family: var(--qx-serif);
   font-weight: 700;
+  --qx-scalar: 14;
+  font-size: calc(var(--qx-scalar) * var(--qx-unit-text));
   padding: 0;
 }
 
@@ -351,9 +353,7 @@ main h3 *,
 main h4 *,
 main h5 *,
 main h6 * {
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: inherit;
+  font: inherit;
   color: inherit;
 }
 
