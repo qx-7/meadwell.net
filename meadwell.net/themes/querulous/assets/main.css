@@ -235,7 +235,7 @@ a:hover {
   display: flex;
   flex-flow: row nowrap;
   gap: 1rem;
-  align-items: end;
+  align-items: start;
 }
 
 #header h1 {
