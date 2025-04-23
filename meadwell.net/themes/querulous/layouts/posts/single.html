@@ -1,6 +1,7 @@
 {{ define "main" }}
   <article class="posts">
     <main>
+
       <article class="h-entry">
         <header id="main-header">
           <hgroup>
@@ -20,9 +21,11 @@
         {{ .Content }}
         </div>
       </article>
+
       <footer>
         {{ partial "tags.html" (.GetTerms "tags") }}
       </footer>
+
     </main>
 
     {{ if or .NextInSection .PrevInSection }}
@@ -41,5 +44,6 @@
         </div>
       </footer>
     {{ end }}
+
   </article>
 {{ end }}
