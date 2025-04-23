@@ -1,4 +1,4 @@
-baseURL: "https://meadwell.net/"
+relativeURLs: true
 languageCode: "en-US"
 timeZone: "America/Edmonton"
 title: "Meadwell.net"
@@ -6,8 +6,10 @@ theme: "querulous"
 params:
   longTitle: "Mel Meadwell on the web"
   admin: "Mel Meadwell"
-  tagline: "Stopping, dropping, and rolling since 1666"
 copyright: "© 2024–2025 Mel Meadwell."
+taxonomies:
+  tag: tags
+  collection: collections
 permalinks:
   page:
     posts: /:year/:month/post-:filename/
