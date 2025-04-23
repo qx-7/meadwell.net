@@ -608,3 +608,26 @@ em {
 .note > p {
   margin: 0;
 }
+
+.tags {
+  display: flex;
+  width: fit-content;
+  gap: 0.5rem;
+  padding: 0;;
+}
+
+.tags::before {
+  content: "Tags:";
+  color: var(--qx-main-footer-color)
+}
+
+.tags > * {
+  flex: content;
+  list-style: none;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+.tags li::before {
+  content: "#";
+}

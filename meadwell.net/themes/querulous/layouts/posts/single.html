@@ -19,11 +19,10 @@
         <div class="e-content">
         {{ .Content }}
         </div>
-
-        <footer>
-          <!-- tags partial here -->
-        </footer>
       </article>
+      <footer>
+        {{ partial "tags.html" (.GetTerms "tags") }}
+      </footer>
     </main>
 
     {{ if or .NextInSection .PrevInSection }}
