@@ -1,5 +1,6 @@
 meadwell.net/public/
 .hugo_build.lock
+*Zone.Identifier
 .vscode/
 *.md.backup
 meadwell.net/content/posts/2024/01/other-test.md
