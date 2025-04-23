@@ -2,7 +2,7 @@ relativeURLs: true
 languageCode: "en-US"
 timeZone: "America/Edmonton"
 title: "Meadwell.net"
-theme: "querulous"
+theme: ["hugo-feeds", "querulous"]
 params:
   longTitle: "Mel Meadwell on the web"
   admin: "Mel Meadwell"
@@ -29,3 +29,16 @@ markup:
       attribute:
         block: true
         title: true
+disableKinds:
+- rss
+outputs:
+  home:
+  - html
+  section:
+  - html
+  - atom
+  taxonomy:
+  - html
+  term:
+  - html
+  - atom
