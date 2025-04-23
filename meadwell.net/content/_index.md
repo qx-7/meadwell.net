@@ -12,7 +12,7 @@ I'm a 20-something queer writer, artist, thinker. I'm interested in art, culture
 
 Check out my [posts](/posts), where I publish all sorts of neat stuff!
 
-{{< note "My latest post:" >}}**[On the Loneliness Epidemic and Being a Woman Online](/2025/02/post-on-the-loneliness-epidemic-and-being-a-woman-online)**
+{{< note "Featured post:" >}}**[On the Loneliness Epidemic and Being a Woman Online](/2025/02/post-on-the-loneliness-epidemic-and-being-a-woman-online)**
 
 In which I ramble about loneliness, marginalization, and my transfem experience with in-game chat
 
