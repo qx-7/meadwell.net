@@ -29,6 +29,7 @@
   /* LIGHT THEME */
 @media (prefers-color-scheme: light) { :root {
   --qx-foreground: var(--qx-dark);
+  --qx-nearground: var(--qx-meddark);
   --qx-midground: var(--qx-medlight);
   --qx-background: var(--qx-light);
   --qx-main-fore: var(--qx-main-darker);
@@ -55,6 +56,7 @@
 
 :root {
   /* APPLY THEME */
+  --qx-nearground: color-mix(in oklab, var(--qx-foreground), var(--qx-midground) 80%);
   --qx-main-far: color-mix(in oklab, var(--qx-main-mid), var(--qx-main-back));
   --qx-main-near: color-mix(in oklab, var(--qx-main-mid), var(--qx-main-fore));
   --qx-accent-far: color-mix(in oklab, var(--qx-accent-mid), var(--qx-accent-back));
@@ -455,7 +457,7 @@ main h6 a:hover {
   --qx-scalar: 13;
   font-size: calc(var(--qx-scalar) * var(--qx-unit-text));
   color: var(--qx-pubdate-color);
-  margin: 0.6rem 0 1.6rem 0;
+  margin: 0.6rem 0 0 0;
 }
 
 #main-header h1, #main-header h1 * {
@@ -613,21 +615,42 @@ em {
   display: flex;
   width: fit-content;
   gap: 0.5rem;
-  padding: 0;;
+  padding: 0;
+  align-items: baseline;
 }
 
 .tags::before {
   content: "Tags:";
-  color: var(--qx-main-footer-color)
-}
-
-.tags > * {
-  flex: content;
-  list-style: none;
-  border: 1px solid white;
-  border-radius: 4px;
+  color: var(--qx-main-footer-color);
 }
 
 .tags li::before {
   content: "#";
+}
+
+.button {
+  font-family: var(--qx-mono);
+  font-size: 1.06rem;
+  font-weight: 700;
+  flex: content;
+  list-style: none;
+  border: 1px solid var(--qx-nearground);
+  border-radius: 0.6rem;
+  padding: 0.4rem;
+  color: var(--qx-main-fore);
+  background: var(--qx-midground);
+}
+
+.button:hover {
+  color: var(--qx-main-fore);
+  background: color-mix(in oklab, var(--qx-accent-fore), var(--qx-background) 70%);
+  border-color: var(--qx-main-back);
+}
+
+.permalink {
+  margin: 0.4rem 0;
+}
+
+.permalink > a::before {
+  content: "🔗";
 }

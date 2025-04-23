@@ -6,7 +6,6 @@
         <header id="main-header">
           <hgroup>
             <h1 class="p-name">{{ .Title }}</h1>
-            <p><a class="u-url u-uid" href="{{ .Permalink }}"></a></p>
             {{ if .Description }}<p class="p-summary">{{ .Description }}</p>{{ end }}
           </hgroup>
 
@@ -15,6 +14,7 @@
             {{ $dateHuman := .Date | time.Format "02 Jan 2006" }}
             <p class="pubdate">Published <time class="dt-published" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
           {{ end }}
+            <p class="permalink"><a class="u-url u-uid button" href="{{ .Permalink }}">Permalink</a></p>
         </header>
 
         <div class="e-content">
