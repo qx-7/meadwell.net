@@ -1,6 +1,6 @@
 ---
 title: "A Quick Springtime Update"
-description: "Another bloggishly-rambling update post, in which I lament the past and lay out some pretty snazzy summer plans!"
+description: "Another rambling update post, typical of the blogger archetype, in which I lament the past and then lay out some pretty snazzy plans for the future!"
 date: "2025-04-24"
 draft: false
 ---
@@ -9,7 +9,7 @@ Hi! Time for a springtime update, I think! April is nearly over, and I've been a
 
 This winter has been pretty tough for a number of reasons... seasonal depression was hitting _really_ hard, I had just lost a friend group, I was dealing with shitty family dynamics, and I was stressed about all kinds of stuff, and a million other things of various levels of impact to my psyche. All that kept me from doing a lot of fun things, and I've been neglecting passion projects. Fortunately, the semester has nearly ended, and the weather has improved, and the sunlight is back (on loan from the southern hemisphere), and I have learned and healed so so much. All this is to say that I'm poised to _really_ do some neat shit this summer. I feel a bit of a glowup coming on... but my glow is from within; material things do not illuminate.
 
-I'm not sure what my glowup summer 2025 is going to look like, and that's pretty scary. It's difficult for me to deal with things that are uncertain---I suspect this to be related to my trouble with academia; I'll have the space and time to _do something_ this summer, which I am wait-becoming _excitedly_...!
+I'm not sure what my glowup summer 2025 is going to look like, and that's pretty scary. It's difficult for me to deal with things that are uncertain---I suspect this to be related to my trouble with academia; I'll have the space and time to _do something_ this summer, which I am wait-becoming for _excitedly_...!
 
 In the meantime, ... Actually, who am I kidding? I'm already doing it. I wasn't writing posts all winter, and now I am. It's important to be mindful of, and joyful about, this sort of sign-of-healing. Unfortunately, I am _very_ sleepy at time of writing, and you know how I get when I get sleepy...
 
