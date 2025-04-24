@@ -1,6 +1,6 @@
 ---
 title: "A Quick Springtime Update"
-description: "Another rambling update post, typical of the blogger archetype, in which I lament the past and then lay out some pretty snazzy plans for the future!"
+description: "Another rambling update post, typical of the blogger archetype, in which I lament the past and then lay out my thoughts for the future!"
 date: "2025-04-24"
 draft: false
 ---
