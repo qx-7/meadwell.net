@@ -11,7 +11,7 @@
     <article id="list">
       {{ range .Site.Pages.GroupByParam "shelf" }}
         <div class="list-container">
-          <h2 class="list-heading">{{ .Key }}</h2>
+          <h2 class="list-heading" id="{{ .Key | lower }}">{{ .Key }}</h2>
           <div class="list-group">
             {{ range .Pages }}
               <div class="list-item">
