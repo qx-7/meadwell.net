@@ -2,7 +2,7 @@
 title: "A Quick Springtime Update"
 description: "Another bloggishly-rambling update post, in which I lament the past and lay out some pretty snazzy summer plans!"
 date: "2025-04-24"
-draft: true
+draft: false
 ---
 
 Hi! Time for a springtime update, I think! April is nearly over, and I've been away since February.
