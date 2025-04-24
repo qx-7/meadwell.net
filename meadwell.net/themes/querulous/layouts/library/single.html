@@ -1,11 +1,16 @@
 {{ define "main" }}
+
+{{ $shelf := false }}
+{{ if .Page.Params.shelf }}{{ $shelf = .Page.Params.shelf }}{{ end }}
+
   <article class="posts">
+
     <main>
       <article>
         <header id="main-header">
           <hgroup>
             <h1>{{ .Title }}</h1>
-            <h2>in <a href="/library">Mel's Library</a>{{ if .Page.Params.shelf }}{{ $shelf := .Page.Params.shelf }} (<a href="/library/{{ $shelf | lower }}">{{ $shelf }}</a> shelf){{ end }}</h2>
+            <h2>in <a href="/library">Mel's Library</a>{{ if $shelf }} (<a href="/library#{{ $shelf | lower }}">{{ $shelf | title }}</a> shelf){{ end }}</h2>
             {{ if .Description }}<p>{{ .Description }}</p>{{ end }}
           </hgroup>
 
@@ -25,22 +30,19 @@
       </article>
     </main>
 
-    {{ if or .NextInSection .PrevInSection }}
-      {{ $shelf := .Page.Params.shelf }}
+    {{ $collection := (where .CurrentSection.Pages "Params.shelf" $shelf).ByWeight.Reverse }}
+    {{ if or ($collection.Next .) ($collection.Prev .) }}
       <footer class="main-footer">
         <div class="adjacentPosts">
-          {{ if .NextInSection }}
-            {{ with .NextInSection }}
-              <p>Next page in {{ $shelf }}: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
-            {{ end }}
+          {{ with $collection.Next . }}
+            <p>Next page in {{ $shelf }}: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
           {{ end }}
-          {{ if .PrevInSection }}
-            {{ with .PrevInSection }}
-              <p>Previous page in {{ $shelf }}: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
-            {{ end }}
+          {{ with $collection.Prev . }}
+            <p>Previous page in {{ $shelf }}: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
           {{ end }}
         </div>
       </footer>
     {{ end }}
+
   </article>
 {{ end }}
