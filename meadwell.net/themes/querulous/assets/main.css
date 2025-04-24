@@ -652,5 +652,20 @@ em {
 }
 
 .permalink > a::before {
-  content: "🔗";
+  content: "🔗 ";
+}
+
+/* emoji for external links */
+main a:not([href^="#"]):not([href^="/"]):not([href^="./"]):not([href^="../"]):not([href^="https://meadwell.net"]):not([href^="meadwell.net"])::before {
+  content: "🌐 ";
+}
+
+/* emoji for internal links */
+main a[href^="#"]::before, main a[href^="/"]:not([href^="//"])::before, main a[href^="./"]::before, main a[href^="../"]::before, main a[href^="https://meadwell.net"]::before, main a[href^="meadwell.net"]::before {
+  content: "🔆 ";
+}
+
+/* remove emoji from page header */
+main #main-header :not([class="permalink"]) a::before {
+  content: "";
 }
