@@ -16,6 +16,6 @@ cascade:
     shelf: Reviews
 ---
 
-Welcome to my Library! I'll make sure these pages are maintained and kept up-to-date to the best of my ability.
+Welcome to my Library! I'll make sure these pages are maintained and kept up-to-date to the best of my ability. This is a list of living reference works.
 
 Pages are organized into shelves by topic. Have fun browsing!

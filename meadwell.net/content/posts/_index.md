@@ -1,9 +1,9 @@
 ---
-title: "Posts and Articles"
+title: "Blog Posts"
 linkTitle: "Posts"
 menus:
   main:
     weight: 30
 ---
 
-Blog feed coming soon! I'll have all sorts of interesting articles in here.
+Here you'll find my one-and-done publications: edits are rare and language is loose. Have fun reading!
