@@ -2,7 +2,7 @@
 title: "My Favs: Film, TV, and Anime"
 date: "2025-04-24"
 description: "A list of thought-provoking and otherwise compelling works of film and television, all of them [soon™] reviewed by me. See all my favs in one place!"
-draft: true
+draft: false
 ---
 
 This is a list of my favourite (and less-than-favourite) works of film, TV, and anime! If it could reasonably be burnt to a DVD, it belongs here.
