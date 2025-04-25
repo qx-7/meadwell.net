@@ -18,4 +18,4 @@ cascade:
 
 Welcome to my Library! I'll make sure these pages are maintained and kept up-to-date to the best of my ability.
 
-Pages are organized by topic. Have fun browsing!
+Pages are organized into shelves by topic. Have fun browsing!
