@@ -5,8 +5,17 @@ title: "Meadwell.net"
 theme: ["hugo-feeds", "querulous"]
 params:
   longTitle: "Mel Meadwell on the web"
-  admin: "Mel Meadwell"
-copyright: "© 2024–2025 Mel Meadwell."
+  admin:
+    name: "Mel Meadwell"
+    link: "https://meadwell.net/"
+  copyright:
+    year: "2024–2025"
+    content:
+      licenseName: "CC BY-SA 4.0"
+      licenseLink: "https://creativecommons.org/licenses/by-sa/4.0/"
+    layout:
+      licenseName: "AGPLv3"
+      licenseLink: "https://www.gnu.org/licenses/agpl-3.0.html"
 taxonomies:
   tag: tags
   collection: collections
