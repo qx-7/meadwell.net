@@ -8,7 +8,7 @@ Hi there, traveller! These are the source files for [my personal site at meadwel
 
 ## Usage
 
-Clone the repo and go to town! Run `hugo` in the inner `meadwell.net` directory to render the site. See [licensing](#license).
+Clone the repo and go to town! Run `hugo` in the inner `meadwell.net` directory to render the site. See [License](#license).
 
 ## Attributions
 
