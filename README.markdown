@@ -3,6 +3,8 @@
 ![layout: AGPL-3.0-or-later](https://img.shields.io/badge/layout-AGPL--3.0--or--later-indianred?labelColor=darkslategrey)
 ![content: CC BY-SA 4.0](https://img.shields.io/badge/content-CC_BY--SA_4.0-indianred?labelColor=darkslategrey)
 ![built for Hugo ≥0.140.2](https://img.shields.io/badge/built_for-Hugo_%E2%89%A50.140.2-deeppink?logo=hugo&logoColor=white&labelColor=darkslategrey)
+![badge for HTML5](https://img.shields.io/badge/HTML5-tomato?logo=html5&logoColor=white)
+![badge for CSS3](https://img.shields.io/badge/CSS3-tomato?logo=css3&logoColor=white)
 
 README updated 2025-04-26
 
