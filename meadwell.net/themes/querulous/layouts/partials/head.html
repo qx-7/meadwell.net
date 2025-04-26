@@ -5,7 +5,7 @@
 
 <meta name="theme-color" content="#178279" />
 
-<title>{{ printf "%s – %s" (.Page.LinkTitle | title) .Site.admin.name }}</title>
+<title>{{ printf "%s – %s" (.Page.LinkTitle | title) .Site.Params.admin.name }}</title>
 
 {{ partialCached "style.html" . }}
 {{ if eq .LinkTitle "Status" }}{{ partialCached "style_quips.html" . }}{{ end }}
