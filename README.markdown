@@ -1,6 +1,6 @@
 # Mel Meadwell's website source code
 
-Updated 2025-04-25
+README updated 2025-04-25
 
 ## About
 
