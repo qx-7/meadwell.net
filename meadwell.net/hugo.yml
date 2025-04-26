@@ -4,6 +4,7 @@ timeZone: "America/Edmonton"
 title: "Meadwell.net"
 theme: ["hugo-feeds", "querulous"]
 params:
+  repoLink: "https://github.com/qx-7/meadwell.net"
   longTitle: "Mel Meadwell on the web"
   admin:
     name: "Mel Meadwell"
