@@ -238,7 +238,7 @@ a:hover {
 }
 
 #header {
-  padding-bottom: 1rem;
+  padding-bottom: 0.6rem;
   border-bottom: var(--qx-border-width) solid var(--qx-border-color);
   display: flex;
   flex-flow: column nowrap;
@@ -286,12 +286,12 @@ a:hover {
 
 #footer {
   margin-top: 1rem;
-  padding-top: 1rem;
   border-top: var(--qx-border-width) solid var(--qx-border-color);
 }
 
 #footer, #footer p {
   color: var(--qx-footer-color);
+  font-size: 0.9em;
 }
 
 #footer a {
