@@ -315,7 +315,7 @@ h6 {
 }
 
 main {
-  --qx-scalar: 17;
+  --qx-scalar: 18;
   font-size: calc(var(--qx-scalar) * var(--qx-unit-text));
   color: var(--qx-foreground);
 }
