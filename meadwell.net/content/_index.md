@@ -20,4 +20,4 @@ Published 09 Feb 2025{{< /note >}}
 
 {{< note >}}Don't let me forget to finish implementing feeds!! RSS and Atom and JSON, oh my!!!{{< /note >}}
 
-I plan to put more of a personal profile on this page pretty soon. Presently my personality is particularly pervasive throughout this project, but... proper people possess profiles!! Profiles professing _personality, pursuits, and passions_ are perhaps precious professions of prospective personhood, and _I wanna be somebody!!!_
+I plan to put more of a personal profile on this page pretty soon. Presently my personality is particularly pervasive throughout this project, but... proper people possess profiles!! Profiles professing _personality, pursuits, and passions_ are perhaps precious pronunciations of prospective personhood, and _I wanna be somebody!!!_
