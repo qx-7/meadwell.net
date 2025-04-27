@@ -200,7 +200,7 @@ p, ul, ol, figure {
 }
 
 .e-content p {
-  line-height: 2.4rem;
+  line-height: 2.75rem;
   margin: 1.2rem 0;
   text-indent: 3rem;
 }
@@ -315,7 +315,7 @@ h6 {
 }
 
 main {
-  --qx-scalar: 16;
+  --qx-scalar: 17;
   font-size: calc(var(--qx-scalar) * var(--qx-unit-text));
   color: var(--qx-foreground);
 }
