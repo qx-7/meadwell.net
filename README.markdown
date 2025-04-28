@@ -29,10 +29,13 @@ See [License](#license).
 
 Made for [Hugo](https://gohugo.io/), everyone's favourite static site generator.
 
-Unless otherwise noted, all source files are authored by Mel Meadwell.
+Unless otherwise noted, all source files are copyright 2024--2025 by Mel Meadwell.
 
-The feeds on my site are handled beautifully by the [hugo-feeds](https://codeberg.org/yelosan/hugo-feeds) module, created by [Yahuhanan Yukiya Sèsè Cuneta](https://youronly.one/), licensed under [MIT](https://github.com/qx-7/meadwell.net/blob/main/meadwell.net/themes/hugo-feeds/LICENSE.markdown).
+The feeds on my site are handled beautifully by the [hugo-feeds](https://codeberg.org/yelosan/hugo-feeds) module, copyright by [Yahuhanan Yukiya Sèsè Cuneta](https://youronly.one/), licensed under [MIT](https://github.com/qx-7/meadwell.net/blob/main/meadwell.net/themes/hugo-feeds/LICENSE.markdown). See [./meadwell.net/themes/hugo-feeds](https://github.com/qx-7/meadwell.net/blob/main/meadwell.net/themes/hugo-feeds).
 
 ## License
+
+meadwell.net copyright 2024--2025 by [Mel Meadwell](https://meadwell.net).  
+[hugo-feeds](https://codeberg.org/yelosan/hugo-feeds) copyright by [Yahuhanan Yukiya Sèsè Cuneta](https://youronly.one/), licensed under [MIT](https://github.com/qx-7/meadwell.net/blob/main/meadwell.net/themes/hugo-feeds/LICENSE.markdown).
 
 The content of this site is licensed under [CC BY-SA 4.0](https://github.com/qx-7/meadwell.net/blob/main/LICENSE.CC-BY-SA-4.0.markdown). The layout is licensed under [AGPLv3 or later](https://github.com/qx-7/meadwell.net/blob/main/LICENSE.AGPL-3.0-or-later.markdown).
