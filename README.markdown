@@ -12,9 +12,18 @@ README updated 2025-04-26
 
 Hi there, traveller! These are the source files for [my personal site at meadwell.net](https://meadwell.net). Have a gander!
 
+## Dependencies
+
+- `hugo` ≥0.140.2 (see [Quick Start in the Hugo docs](https://gohugo.io/getting-started/quick-start/) for installation instructions)
+
 ## Usage
 
-Clone the repo and go to town! Run `hugo` in the inner `meadwell.net` directory to render the site. See [License](#license).
+Clone the repo and go to town!
+
+- run `hugo` in the inner `meadwell.net` directory to render the production site
+- run `hugo serve -D` in the inner directory to test-render the site for development. `-D` renders draft content (i.e., frontmatter contains `draft: true`)
+
+See [License](#license).
 
 ## Attributions
 
