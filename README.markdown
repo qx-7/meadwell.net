@@ -21,7 +21,7 @@ Hi there, traveller! These are the source files for [my personal site at meadwel
 Clone the repo and go to town!
 
 - run `hugo` in the inner `meadwell.net` directory to render the production site
-- run `hugo serve -D` in the inner directory to render and serve the site from Hugo's build-in webserver. `-D` renders draft content (i.e., frontmatter contains `draft: true`)
+- run `hugo serve -D` in the inner directory to render and serve the site from Hugo's local development webserver. `-D` renders draft content (i.e., frontmatter contains `draft: true`)
 
 See [License](#license).
 
