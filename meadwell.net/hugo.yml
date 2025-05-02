@@ -22,9 +22,9 @@ taxonomies:
   collection: collections
 permalinks:
   page:
-    posts: /:year/:month/post-:filename/
-    library: /:year/:month/page-:filename/
-    misc: /:year/:month/misc-:filename/
+    posts: /:year/:month/post-:contentbasename/
+    library: /:year/:month/page-:contentbasename/
+    misc: /:year/:month/misc-:contentbasename/
   section:
     posts: /posts/
     library: /library/
@@ -32,7 +32,7 @@ permalinks:
 module:
   hugoVersion:
     extended: false
-    min: 0.140.2
+    min: 0.147.0
 markup:
   goldmark:
     parser:

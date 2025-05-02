@@ -1,5 +1,5 @@
 [build.environment]
-HUGO_VERSION = "0.140.2"
+HUGO_VERSION = "0.147.0"
 TZ = "Canada/Mountain"
 
 [build]
