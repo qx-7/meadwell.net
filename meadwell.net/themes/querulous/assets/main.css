@@ -200,8 +200,8 @@ p, ul, ol, figure {
 }
 
 .posts .e-content p {
-  line-height: 2.75rem;
-  margin: 1.2rem 0;
+  line-height: 2rem;
+  margin: 1rem 0;
   text-indent: 3rem;
 }
 
@@ -508,6 +508,10 @@ main h6 a:hover {
   gap: 1rem;
 }
 
+#list > * {
+  padding-left: 0;
+}
+
 .list-container {
   display: flex;
   flex-flow: column;
@@ -640,15 +644,9 @@ em {
   color: var(--qx-main-footer-color);
 }
 
-.tags li::before {
-  content: "#";
-}
-
-.button {
-  font-family: var(--qx-mono);
-  font-size: 1.06rem;
+.tag, .button {
+  font-family: var(--qx-mono) !important;
   font-weight: 700;
-  flex: content;
   list-style: none;
   border: 1px solid var(--qx-nearground);
   border-radius: 0.6rem;
@@ -657,10 +655,29 @@ em {
   background: var(--qx-midground);
 }
 
+.button .tag {
+  background: inherit;
+  border: none;
+  padding: 0;
+}
+
+.tag::before {
+  content: "#";
+}
+
+.button {
+  flex: content;
+}
+
 .button:hover {
   color: var(--qx-main-fore);
   background: color-mix(in oklab, var(--qx-accent-fore), var(--qx-background) 70%);
   border-color: var(--qx-main-back);
+}
+
+.list-title.tag {
+  width: fit-content;
+  font-size: 1.2rem;
 }
 
 .permalink {

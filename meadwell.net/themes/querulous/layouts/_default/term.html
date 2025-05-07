@@ -1,0 +1,33 @@
+{{ define "main" }}
+<main>
+  <article>
+    <header id="main-header">
+      <hgroup>
+        <h1>{{ .Data.Singular | title }}: <span class="tag">{{ .Title | lower }}</span></h1>
+      </hgroup>
+      <p>Back to <a href="/{{ .Data.Plural | lower }}/">all {{ .Data.Plural | lower }}</a>.</p>
+    </header>
+    <div class="e-content">
+      {{ .Content }}
+    </div>
+    <article id="list">
+      <div class="list-group">
+        {{ range .Pages.ByDate.Reverse }}
+          <div class="list-item">
+            <a href="{{ .RelPermalink }}">
+              <article>
+                {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+                {{ $dateHuman := .Date | time.Format "02 Jan 06" }}
+                <h4 class="list-title list-heading">{{ .Title | .RenderString }}</h4>
+                <p>{{ .Description | .RenderString }}</p>
+                <p><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
+              </article>
+            </a>
+          </div>
+        {{ end }}
+      </div>
+    </article>
+  </article>
+</main>
+{{ end }}
+          

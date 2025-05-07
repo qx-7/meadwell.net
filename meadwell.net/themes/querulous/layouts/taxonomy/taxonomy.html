@@ -1,0 +1,36 @@
+{{ define "main" }}
+{{/* don't ask why it has to be at layouts/taxonomy/taxonomy.html
+     because i have literally no idea why it wasn't working in _default
+     
+     you should probably look into this later... */}}
+
+     <main>
+       <article>
+         <header id="main-header">
+           <hgroup>
+             <h1>{{ .Title }}</span></h1>
+           </hgroup>
+         </header>
+         <div class="e-content">
+           {{ .Content }}
+         </div>
+         <article id="list">
+           <div class="list-group">
+             {{ range .Pages.ByDate.Reverse }}
+               <div class="list-item">
+                 <a href="{{ .RelPermalink }}">
+                   <article>
+                     {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+                     {{ $dateHuman := .Date | time.Format "02 Jan 06" }}
+                     <h2 class="list-title list-heading tag">{{ .Title | lower }} ({{ .Site.Taxonomies.tags.Count (.Title | lower) }})</h2>
+                     <p><time datetime="{{ $dateMachine }}">Latest: {{ $dateHuman }}</time></p>
+                   </article>
+                 </a>
+               </div>
+             {{ end }}
+           </div>
+         </article>
+       </article>
+     </main>
+     {{ end }}
+     
