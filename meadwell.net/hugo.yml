@@ -15,7 +15,7 @@ params:
       licenseName: "CC BY-SA 4.0"
       licenseLink: "https://github.com/qx-7/meadwell.net/blob/main/LICENSE.CC-BY-SA-4.0.markdown"
     layout:
-      licenseName: "AGPLv3 or later"
+      licenseName: "AGPL 3.0 or later"
       licenseLink: "https://github.com/qx-7/meadwell.net/blob/main/LICENSE.AGPL-3.0-or-later.markdown"
 taxonomies:
   tag: tags
