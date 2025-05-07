@@ -15,5 +15,5 @@ Parameters may both be left empty.
 
 <div class="note">
   {{ if $title }}<p><strong>{{ $title | .Page.RenderString }}</strong></p>{{ end }}
-  {{ with . }}{{if $content }}<p>{{ $content | .Page.RenderString }}</p>{{ end }}{{ end }}
+  {{if $content }}{{ $content | .Page.RenderString }}{{ end }}
 </div>
