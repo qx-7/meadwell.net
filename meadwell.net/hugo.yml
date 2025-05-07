@@ -13,10 +13,10 @@ params:
     year: "2024–2025"
     content:
       licenseName: "CC BY-SA 4.0"
-      licenseLink: "https://github.com/qx-7/meadwell.net/blob/main/LICENSE.CC-BY-SA-4.0.markdown"
+      licenseLink: "https://meadwell.net/2025/05/misc-cc-by-sa-4.0/"
     layout:
       licenseName: "AGPL 3.0 or later"
-      licenseLink: "https://github.com/qx-7/meadwell.net/blob/main/LICENSE.AGPL-3.0-or-later.markdown"
+      licenseLink: "https://meadwell.net/2025/05/misc-agpl-3.0-or-later/"
 taxonomies:
   tag: tags
   collection: collections
