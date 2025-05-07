@@ -4,7 +4,7 @@
       {{ if .Title }}
         <header id="main-header">
           <hgroup>
-            <h1>{{ .Title }}</h1>
+            <h1>{{ .Title | .RenderString }}</h1>
           </hgroup>
         </header>
       {{ end }}

@@ -5,8 +5,8 @@
 
     <header id="main-header">
       <hgroup>
-        <h1>{{ .Title }}</h1>
-        {{ if .Description }}<p>{{ .Description }}</p>{{ end }}
+        <h1>{{ .Title | .RenderString }}</h1>
+        {{ if .Description }}<p>{{ .Description | .RenderString }}</p>{{ end }}
       </hgroup>
     </header>
 
@@ -38,8 +38,8 @@
                             <article>
                               {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
                               {{ $dateHuman := .Date | time.Format "02 Jan 2006" }}
-                              <h4 class="list-title list-heading">{{ .Title }}</h4>
-                              <p>{{ .Description }}</p>
+                              <h4 class="list-title list-heading">{{ .Title | .RenderString }}</h4>
+                              <p>{{ .Description | .RenderString }}</p>
                               <p><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
                             </article>
                           </a>

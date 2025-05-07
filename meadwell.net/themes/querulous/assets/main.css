@@ -685,3 +685,11 @@ em {
 .e-content a[href^="//"]::before {
   content: "🌐 ";
 }
+
+main em {
+  font-style: italic;
+}
+
+main strong {
+  font-weight: bolder;
+}

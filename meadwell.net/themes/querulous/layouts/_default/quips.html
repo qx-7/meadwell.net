@@ -3,7 +3,7 @@
   <article class="h-feed">
     <header id="main-header">
       <hgroup>
-        <h1 class="p-name">{{ .Title }}</h1>
+        <h1 class="p-name">{{ .Title | .RenderString }}</h1>
       </hgroup>
     </header>
     <div class="p-summary">

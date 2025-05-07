@@ -5,8 +5,8 @@
       <article class="h-entry">
         <header id="main-header">
           <hgroup>
-            <h1 class="p-name">{{ .Title }}</h1>
-            {{ if .Description }}<p class="p-summary">{{ .Description }}</p>{{ end }}
+            <h1 class="p-name">{{ .Title | .RenderString }}</h1>
+            {{ if .Description }}<p class="p-summary">{{ .Description | .RenderString }}</p>{{ end }}
           </hgroup>
 
           {{ if .Date }}
