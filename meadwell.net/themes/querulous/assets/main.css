@@ -693,3 +693,42 @@ main em {
 main strong {
   font-weight: bolder;
 }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem 1rem;
+  background-color: var(--qx-midground);
+  border: var(--qx-border-width) solid var(--qx-border-color);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .contact-form {
+    display: grid;
+    grid-template-columns: 12rem auto;
+  }
+}
+
+.form-item {
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+}
+
+.contact-form button[type="submit"] {
+  grid-column: 1 / -1;
+  background-color: var(--qx-accent-back);
+  color: var(--qx-foreground);
+  border-color: var(--qx-accent);
+  width: 20rem;
+  margin: 0 auto;
+}
+
+.form-required {
+  font-weight: bolder;
+}
+
+.form-required::before {
+  content: "*";
+}
