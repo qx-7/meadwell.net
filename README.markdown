@@ -29,13 +29,13 @@ See [License](#license).
 
 Made for [Hugo](https://gohugo.io/), everyone's favourite static site generator.
 
-Unless otherwise noted, all source files are copyright 2024--2025 by Mel Meadwell.
+Unless otherwise noted, all source files are copyright 2024–2025 by Mel Meadwell.
 
 The feeds on my site are handled beautifully by the [hugo-feeds](https://codeberg.org/yelosan/hugo-feeds) module, copyright by [Yahuhanan Yukiya Sèsè Cuneta](https://youronly.one/), licensed under [MIT](https://github.com/qx-7/meadwell.net/blob/main/meadwell.net/themes/hugo-feeds/LICENSE.markdown). See [./meadwell.net/themes/hugo-feeds](https://github.com/qx-7/meadwell.net/blob/main/meadwell.net/themes/hugo-feeds).
 
 ## License
 
-meadwell.net copyright 2024--2025 by [Mel Meadwell](https://meadwell.net).
+meadwell.net copyright 2024–2025 by [Mel Meadwell](https://meadwell.net).
 
 [hugo-feeds](https://codeberg.org/yelosan/hugo-feeds) copyright by [Yahuhanan Yukiya Sèsè Cuneta](https://youronly.one/), licensed under [MIT](https://github.com/qx-7/meadwell.net/blob/main/meadwell.net/themes/hugo-feeds/LICENSE.markdown).
 
