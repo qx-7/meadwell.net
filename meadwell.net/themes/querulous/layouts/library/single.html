@@ -17,7 +17,7 @@
           {{ if .Date }}
             {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
             {{ $dateHuman := .Date | time.Format "02 Jan 2006" }}
-            <p class="pubdate">Updated <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
+            <p class="pubdate">Published <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
           {{ end }}
           <p class="permalink"><a class="button" href="{{ .Permalink }}">Permalink</a></p>
         </header>
