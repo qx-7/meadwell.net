@@ -199,13 +199,13 @@ p, ul, ol, figure {
   margin: 0.8rem 0;
 }
 
-.e-content p {
+.posts .e-content p {
   line-height: 2.75rem;
   margin: 1.2rem 0;
   text-indent: 3rem;
 }
 
-.e-content p:first-child {
+.posts .e-content p:first-child {
   text-indent: 0;
 }
 
@@ -619,6 +619,12 @@ em {
 
 .note > p {
   margin: 0;
+}
+
+.posts .e-content .note p {
+  line-height: normal;
+  margin: 0;
+  text-indent: 0;
 }
 
 .tags {
