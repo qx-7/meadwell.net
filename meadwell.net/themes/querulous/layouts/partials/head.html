@@ -15,7 +15,7 @@
   <meta name="description" content="{{ . }}" />
 {{ end }}
 
-<title>{{ printf "%s – %s" (.Page.LinkTitle | title) .Site.Params.admin.name }}</title>
+<title>{{ printf "%s – %s" .Page.LinkTitle .Site.Params.admin.name }}</title>
 
 {{ partialCached "style.html" . }}
 {{ if eq .LinkTitle "Status" }}{{ partialCached "style_quips.html" . }}{{ end }}
