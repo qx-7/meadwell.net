@@ -1,5 +1,5 @@
 ---
-title: "Review: _Ferris Bueller's Day Off_ (1986)"
+title: "Brief Review: _Ferris Bueller's Day Off_ (1986)"
 description: "A brief review of John Hughes' 1986 film _Ferris Bueller's Day Off_."
 date: "2025-04-24"
 tags: ["reviews", "films-tv-anime"]
