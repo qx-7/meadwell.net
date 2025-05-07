@@ -15,5 +15,5 @@ Parameters may both be left empty.
 
 <div class="note">
   {{ if $title }}<p><strong>{{ $title | .Page.RenderString }}</strong></p>{{ end }}
-  {{if $content }}{{ $content | .Page.RenderString }}{{ end }}
+  {{if $content }}{{ $content | .Page.RenderString (dict "display" "block") }}{{ end }}
 </div>
