@@ -1,32 +1,45 @@
 ---
-title: "Contact Me"
+title: "Contact Form"
+date: "2025-05-07"
 draft: true
 ---
 
 <p>Use the form below to ask me something, to send me a clever article, or just to say hi!</p>
 
-<form action="https://api.web3forms.com/submit" method="POST">
+<p>Put your name and/or the message subject and/or contact info in the first box. The larger Message box is for everything you wanna tell me! Feel free to include links and whatnot.</p>
+
+<p>I assume that you have the right to distribute whatever you send, but please mention any licensing/copyright info that may be relevant in Additional Notes. Feel free to also use this box for other metadata you'd like to include!</p>
+
+<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
 
     <!-- web3forms.com Access Key -->
     <input type="hidden" name="access_key" value="d8915d2d-f970-47ab-ac1e-e942d831b040" />
 
     <!-- Form Inputs. Each input must have a name="" attribute -->
-    <input type="text" name="name" required />
-    <input type="email" name="email" />
-    <textarea name="message" required></textarea>
+    <label for="name" class="form-required">Name/Subject</label>
+    <input type="text" name="name" class="form-item" placeholder="Name/Subject" style="width:20rem;" required />
+    <label for="message" class="form-required">Message</label>
+    <textarea name="message" class="form-item" placeholder="Message" style="height:20rem;" required></textarea>
+    <label for="notes">Additional Notes (optional)</label>
+    <textarea name="notes" class="form-item" placeholder="Additional Notes (optional)"></textarea>
 
     <!-- Honeypot Spam Protection -->
     <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
     
     <!-- hCaptcha: Recommended for Advanced Spam Protection. -->
-  <div class="h-captcha" data-captcha="true"></div>
+    <span class="form-required">H-Captcha</span>
+    <span class="h-captcha" data-captcha="true"></span>
 
     <!-- Custom Confirmation / Success Page -->
     <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
 
-    <button type="submit">Submit Form</button>
+    <button type="submit" class="button">Send Message</button>
 
 </form>
+
+<p>If you provided a contact method, I'll (probably) be in touch! Just don't wait up staring at your bananaphone... it's not ringing.</p>
+
+<p>And, if relevant, keep an eye on <a href="/posts/">my posts</a> for my response/reaction/reply!</p>
 
 <!-- Required only if you are using hCaptcha or Advanced File Upload. -->
 <script src="https://web3forms.com/client/script.js" async defer></script>
