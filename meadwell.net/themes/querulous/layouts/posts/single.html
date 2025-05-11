@@ -33,12 +33,12 @@
         <div class="adjacentPosts">
           {{ if .NextInSection }}
             {{ with .NextInSection }}
-              <p>Next post: <a href="{{ .RelPermalink }}">{{ .Title | .RenderString }}</a></p>
+              <p>Next post: <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></p>
             {{ end }}
           {{ end }}
           {{ if .PrevInSection }}
             {{ with .PrevInSection }}
-              <p>Previous post: <a href="{{ .RelPermalink }}">{{ .Title | .RenderString }}</a></p>
+              <p>Previous post: <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></p>
             {{ end }}
           {{ end }}
         </div>

@@ -37,10 +37,10 @@
       <footer class="main-footer">
         <div class="adjacentPosts">
           {{ with $collection.Next . }}
-            <p>Next page in {{ $shelf }}: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+            <p>Next page in {{ $shelf }}: <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></p>
           {{ end }}
           {{ with $collection.Prev . }}
-            <p>Previous page in {{ $shelf }}: <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+            <p>Previous page in {{ $shelf }}: <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></p>
           {{ end }}
         </div>
       </footer>
