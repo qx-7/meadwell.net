@@ -749,3 +749,7 @@ main strong {
 .form-required::before {
   content: "*";
 }
+
+.buttons-wrapper img {
+  image-rendering: pixelated;
+}
