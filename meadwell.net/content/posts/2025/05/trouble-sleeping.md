@@ -1,7 +1,7 @@
 ---
 title: "Trouble Sleeping"
 description: "In which I sleepily ramble until I pass out. Written from my bed, with love. ...And frustration."
-date: "2025-05-11"
+date: "2025-05-11T01:45:03-0700"
 tags: ["journals"]
 draft: false
 ---
