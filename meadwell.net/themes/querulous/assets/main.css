@@ -189,9 +189,9 @@ html {
 }
 
 body {
-  min-width: 300px;
-  max-width: 960px;
-  width: 85%;
+  min-width: 220px;
+  max-width: 720px;
+  width: auto;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -201,11 +201,12 @@ body {
 
 p, ul, ol, figure {
   margin: 0.8rem 0;
+  line-height: 1.5em;
 }
 
 .posts .e-content p {
-  line-height: 2rem;
-  margin: 1rem 0;
+  line-height: calc(1.35em + 0.75vw);
+  margin: calc(0.6em + 0.5vw) 0;
   text-indent: 3rem;
 }
 
@@ -289,11 +290,17 @@ a:hover {
 #footer {
   margin-top: 1rem;
   border-top: var(--qx-border-width) solid var(--qx-border-color);
+  padding-top: 0.6em;
 }
 
 #footer, #footer p {
   color: var(--qx-footer-color);
   font-size: 0.9em;
+}
+
+#footer p {
+  line-height: 1.2em;
+  margin: 0.6em 0;
 }
 
 #footer a {
@@ -630,7 +637,7 @@ em {
 }
 
 .posts .e-content .note p {
-  line-height: normal;
+  line-height: 1.5em;
   margin: 0;
   text-indent: 0;
 }
@@ -726,6 +733,8 @@ main strong {
 }
 
 @media screen and (min-width: 700px) {
+
+
   .contact-form {
     display: grid;
     grid-template-columns: 12rem auto;
