@@ -215,7 +215,10 @@ p, ul, ol, figure {
 }
 
 code {
-  font: 600 1em var(--qx-mono);
+  font: 500 0.9em var(--qx-mono);
+  background: var(--qx-midground);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
 }
 
 ::selection {
