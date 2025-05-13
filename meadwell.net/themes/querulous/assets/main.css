@@ -1,7 +1,11 @@
 :root {
   /* FONT */
+  /*
   font-size: calc(12px + 0.3vw);
   --qx-unit-text: calc(1px + 0.013vw);
+  */
+  font-size: 15px;
+  --qx-unit-text: 1.2px;
   --qx-sans: Lexend, sans-serif;
   --qx-serif: Vollkorn, serif;
   --qx-mono: Inconsolata, monospace;
