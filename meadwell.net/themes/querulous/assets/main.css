@@ -703,7 +703,7 @@ em {
 }
 
 /* emoji for external links */
-.e-content a:not([href^="#"]):not([href^="/"]):not([href^="./"]):not([href^="../"]):not([href^="https://meadwell.net"]):not([href^="meadwell.net"])::before {
+.e-content a:not([href^="#"]):not([href^="/"]):not([href^="./"]):not([href^="../"]):not([href^="https://meadwell.net"]):not([href^="meadwell.net"]):not([href^="mailto:"])::before {
   content: "🌐 ";
 }
 
@@ -715,6 +715,10 @@ em {
 /* emoji for protocol relative URLs */
 .e-content a[href^="//"]::before {
   content: "🌐 ";
+}
+
+.e-content a[href^="mailto:"]::before {
+  content: "📧 ";
 }
 
 main em {
