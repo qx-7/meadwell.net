@@ -622,7 +622,7 @@ em {
   font-style: italic;
 }
 
-.note {
+.note, blockquote {
   --qx-width: 0.25rem;
   background-color: var(--qx-note-background-color);
   border-left: var(--qx-width) solid var(--qx-note-border-color);
@@ -633,6 +633,32 @@ em {
   margin: 0.6rem 0;
   border-radius: var(--qx-width);
   font-size: 0.92em;
+}
+
+blockquote {
+  padding-left: 3rem;
+  padding-right: 1rem;
+}
+
+blockquote::before {
+  content: "“";
+  left: -2rem;
+  top: 2rem;
+}
+
+blockquote::after {
+  content: "”";
+  text-align: end;
+  right: -0.4rem;
+  bottom: -0.5rem;
+  margin-top: 0.15rem;
+}
+
+blockquote::before,
+blockquote::after {
+  font-size: 4rem;
+  position: relative;
+  line-height: 1rem;
 }
 
 .note > p {
