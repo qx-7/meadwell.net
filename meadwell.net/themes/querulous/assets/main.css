@@ -298,7 +298,7 @@ a:hover {
 
 #footer, #footer p {
   color: var(--qx-footer-color);
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 #footer p {
