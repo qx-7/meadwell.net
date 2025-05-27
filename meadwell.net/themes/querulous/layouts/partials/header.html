@@ -1,5 +1,6 @@
 {{ partial "navbar.html" (dict "menuID" "main" "page" .) }}
-<hgroup>
+
+<div>
   <!--
   <img id="logo" src="/logo.png" alt="Site logo" height="100px" width="100px" />
   -->
@@ -16,4 +17,4 @@
       <p class="tagline"><a href="/status#{{ $dateURL }}">STATUS <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>:</a> {{ .q }}</p>
     {{ end }}
   </span>
-</hgroup>
+</div>

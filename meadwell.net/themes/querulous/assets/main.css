@@ -251,7 +251,7 @@ a:hover {
   gap: 1rem;
 }
 
-#header > hgroup {
+#header > div {
   display: flex;
   flex-flow: row nowrap;
   gap: 1rem;
