@@ -2,10 +2,10 @@
 
 <div>
   <!--
-  <img id="logo" src="/logo.png" alt="Site logo" height="100px" width="100px" />
+  <img id="logo" src="/logo.png" alt="Site logo" height="100" width="100" />
   -->
-  <a href="/"><img id="logo" src="/favicon.svg" alt="Site logo" height="100px" width="100px" /></a>
-  <span>
+  <a href="/"><img id="logo" src="/favicon.svg" alt="Site logo" height="100" width="100" /></a>
+  <div>
     <h1 class="site-title"><a href="/">{{ .Site.Param "longTitle" }}</a></h1>
     <!-- <p>{{ .Site.Param "tagline" }}</p> -->
 
@@ -16,5 +16,5 @@
       {{ $dateURL := .t | time.Format "2006-01-02-1504" }}
       <p class="tagline"><a href="/status#{{ $dateURL }}">STATUS <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>:</a> {{ .q }}</p>
     {{ end }}
-  </span>
+  </div>
 </div>
