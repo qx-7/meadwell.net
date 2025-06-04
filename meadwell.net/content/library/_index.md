@@ -11,6 +11,10 @@ cascade:
   params:
     shelf: Testing
 - _target:
+    path: /library/nehiyawewin/**
+  params:
+    shelf: nêhiyawêwin (Cree)
+- _target:
     path: /library/reviews/**
   params:
     shelf: Reviews
