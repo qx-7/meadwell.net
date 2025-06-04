@@ -10,7 +10,7 @@
         <header id="main-header">
           <hgroup>
             <h1>{{ .Title | .RenderString }}</h1>
-            <h2>in <a href="/library">Mel's Library</a>{{ if $shelf }} (<a href="/library#{{ $shelf | lower }}">{{ $shelf | title }}</a> shelf){{ end }}</h2>
+            <h2>in <a href="/library">Mel's Library</a>{{ if $shelf }} (<a href="/library#{{ $shelf | lower }}">{{ $shelf }}</a> shelf){{ end }}</h2>
             {{ if .Description }}<p>{{ .Description | .RenderString }}</p>{{ end }}
           </hgroup>
 
