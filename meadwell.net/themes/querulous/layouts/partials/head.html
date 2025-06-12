@@ -18,6 +18,6 @@
 <title>{{ printf "%s – %s" .Page.LinkTitle .Site.Params.admin.name }}</title>
 
 {{ partialCached "style.html" . }}
-{{ if eq .LinkTitle "Status" }}{{ partialCached "style_quips.html" . }}{{ end }}
+{{ if eq .LinkTitle "Status" }}{{ partial "style_quips.html" . }}{{ end }}
 
 {{ partialCached "head-custom.html" . .IsHome }}
