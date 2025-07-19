@@ -97,6 +97,9 @@
 
 * {
   font: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -122,14 +125,18 @@ body {
   text-decoration-color: var(--qx-selection-color);
 }
 
-.l-flex--column {
+.l-flex {
   display: flex;
-  flex-flow: column nowrap;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.l-flex--column {
+  flex-direction: column;
 }
 
 .l-flex--row {
-  display: flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
 }
 
 .m-navbar {
@@ -227,4 +234,35 @@ body {
 
 .m-site-banner__status-link:hover {
   --qx-status-link-color: var(--qx-status-hover-color);
+}
+
+.m-site-footer {
+  --qx-border-width: 0.15rem;
+  --qx-border-color: var(--qx-main-near);
+  --qx-footer-color: var(--qx-main-near);
+  --qx-footer-link-color: var(--qx-accent-near);
+  --qx-footer-link-hover-color: var(--qx-accent-fore);
+  margin-top: 1rem;
+  border-top: var(--qx-border-width) solid var(--qx-border-color);
+  padding-top: 1rem;
+  gap: 0.5rem;
+  color: var(--qx-footer-color);
+  line-height: 1.2em;
+}
+
+.m-site-footer a {
+  color: var(--qx-footer-link-color);
+}
+
+.m-site-footer a:hover {
+  color: var(--qx-footer-link-hover-color);
+}
+
+.m-buttons {
+  gap: 0.2rem;
+}
+
+.m-buttons__container {
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }

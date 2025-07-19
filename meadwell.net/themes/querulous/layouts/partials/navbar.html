@@ -3,7 +3,7 @@
 
 {{ with index site.Menus $menuID }}
   <nav id="menu" class="m-navbar">
-    <ul class="l-flex--row m-navbar__list">
+    <ul class="l-flex l-flex--row m-navbar__list">
       {{ partial "inline/navbar/walk.html" (dict "page" $page "menuEntries" .) }}
     </ul>
   </nav>

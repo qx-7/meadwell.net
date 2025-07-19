@@ -1,10 +1,10 @@
-<header class="m-site-header l-flex--column">
+<header class="m-site-header l-flex l-flex--column">
 
   {{ partial "navbar.html" (dict "menuID" "main" "page" .) }}
 
-  <div class="m-site-banner l-flex--row">
+  <div class="m-site-banner l-flex l-flex--row">
     <a href="/"><img class="m-site-banner__logo" src="/favicon.svg" alt="Site logo" height="100" width="100" /></a>
-    <div class="m-site-banner__container l-flex--column">
+    <div class="m-site-banner__container l-flex l-flex--column">
       <h1 class="m-site-banner__site-title"><a href="/">{{ .Site.Param "longTitle" }}</a></h1>
       <!-- <p>{{ .Site.Param "tagline" }}</p> -->
 
