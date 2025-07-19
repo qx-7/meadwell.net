@@ -124,12 +124,12 @@ body {
 
 .l-flex--column {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
 }
 
 .l-flex--row {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
 }
 
 .m-navbar {
@@ -137,9 +137,9 @@ body {
   --qx-menu-link-hover: var(--qx-main-fore);
   --qx-menu-background-active: var(--qx-midground);
   --qx-menu-background-hover: var(--qx-midground);
+  --qx-scalar: 14;
   font-family: var(--qx-serif);
   font-weight: 700;
-  --qx-scalar: 14;
   font-size: calc(var(--qx-scalar) * var(--qx-unit-text));
   padding: 0;
   color: var(--qx-menu-link-color);
@@ -151,8 +151,10 @@ body {
 
 .m-navbar__list {
   list-style-type: none;
+  flex-wrap: wrap;
   gap: 0.4rem;
   margin: 0;
+  padding: 0;
 }
 
 .m-navbar__label {
@@ -167,4 +169,62 @@ body {
 .m-navbar__label:hover {
   background-color: var(--qx-menu-background-hover);
   --qx-menu-link-color: var(--qx-menu-link-hover);
+}
+
+.m-site-header {
+  --qx-border-width: 0.15rem;
+  --qx-border-color: var(--qx-main-near);
+  padding-bottom: 1rem;
+  border-bottom: var(--qx-border-width) solid var(--qx-border-color);
+  gap: 1rem;
+}
+
+.m-site-banner {
+  --qx-site-title-color: var(--qx-accent-mid);
+  --qx-site-tagline-color: var(--qx-main-far);
+  --qx-status-link-color: var(--qx-accent-far);
+  --qx-status-hover-color: var(--qx-accent-near);
+  gap: 1rem;
+  align-items: start;
+}
+
+.m-site-banner__container {
+  gap: 0.3rem;
+}
+
+.m-site-banner__logo {
+  height: 4rem;
+  width: 4rem;
+}
+
+.m-site-banner__site-title {
+  font-family: var(--qx-sans);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+  color: var(--qx-site-title-color);
+  animation: 25s 1s infinite rainbow;
+}
+
+.m-site-banner__site-title * {
+  color: inherit;
+}
+
+.m-site-banner__tagline {
+  font-family: var(--qx-mono);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--qx-site-tagline-color);
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.m-site-banner__status-link {
+  font-weight: 800;
+  font-size: 0.95em;
+  color: var(--qx-status-link-color);
+}
+
+.m-site-banner__status-link:hover {
+  --qx-status-link-color: var(--qx-status-hover-color);
 }

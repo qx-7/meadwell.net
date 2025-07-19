@@ -1,5 +1,9 @@
-{{ partialCached "copyright.html" . }}
+<footer class="m-site-footer l-flex--column">
 
-<p>Made for <a href="https://gohugo.io/">Hugo</a> with love. See the <a href="{{ .Site.Params.repoLink }}">source files</a>.</p>
+  {{ partialCached "copyright.html" . }}
 
-{{ partialCached "buttons.html" . }}
+  <p>Made for <a href="https://gohugo.io/">Hugo</a> with love. See the <a href="{{ .Site.Params.repoLink }}">source files</a>.</p>
+
+  {{ partialCached "buttons.html" . }}
+
+</footer>

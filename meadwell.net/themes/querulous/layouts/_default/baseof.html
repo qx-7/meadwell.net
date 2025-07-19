@@ -4,14 +4,8 @@
     {{ partial "head.html" . .IsHome }}
   </head>
   <body class="l-flex--column">
-    <header id="header">
-      {{ partial "header.html" . }}
-    </header>
-
+    {{ partial "header.html" . }}
     {{ block "main" . }}{{ end }}
-
-    <footer id="footer">
-      {{ partialCached "footer.html" . }}
-    </footer>
+    {{ partialCached "footer.html" . }}
   </body>
 </html>
