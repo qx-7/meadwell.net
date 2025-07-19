@@ -133,6 +133,10 @@ body {
 }
 
 .m-navbar {
+  --qx-menu-link-color: var(--qx-main-mid);
+  --qx-menu-link-hover: var(--qx-main-fore);
+  --qx-menu-background-active: var(--qx-midground);
+  --qx-menu-background-hover: var(--qx-midground);
   font-family: var(--qx-serif);
   font-weight: 700;
   --qx-scalar: 14;
@@ -142,7 +146,7 @@ body {
 }
 
 .m-navbar * {
-  color: inherit;
+  color: var(--qx-menu-link-color);
 }
 
 .m-navbar__list {
