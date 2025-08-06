@@ -24,7 +24,7 @@ and I'm gonna document every single step that it took to get here.
 
 Blogumentation! Yeah!
 
-# The Sitch(uation)
+## The Sitch(uation)
 
 The Acer Spin 5, which I bought sometime in late 2020,
 comes with Windows 10 pre-installed.
@@ -43,9 +43,43 @@ Do yourself a favour and get updated!!!!
 
 This is roughly the same state as my system when beginning the first steps.
 
-# First Steps
+## First Steps
 
 We'll be starting from a fresh, up-to-date Windows 10 machine.
 There are a few things to download and set up before we really get going.
 
+## Booting Bodhi
 
+### The Linux kernel
+
+Bodhi Linux 6 LTS comes with Linux kernel version 5.15 at time of writing.
+Unfortunately, it's kinda old!
+Let's update the kernel now, and enable future updates too.
+This is not necessary if using Bodhi Linux 6 HWE,
+which provides rolling updates for the kernel.
+
+Since I was silly and installed the LTS version, I have to enable updates now.
+
+## Configuring Everything
+
+Now that Bodhi boots, it's time to get the system all finished up!
+This section will cover all the miscellaneous additional steps I took
+after performing the initial clean install and first boot.
+
+### Hardware compatibility
+
+After installing with the 3rd-party device support option enabled,
+my laptop is (almost) completely usable!!
+
+#### Touchpad
+
+For some reason, the touchpad doesn't wanna work in "I2C" mode.
+As a temporary workaround, setting the touchpad to "PS2" rather than "I2C"
+in the UEFI settings will enable basic functionality.
+
+Another temporary workaround is to add a kernel option
+(temporarily, through the GRUB menu before boot,
+or permanently, by configuring and updating GRUB from Bodhi)
+when booting the Linux kernel (ver. `5.15.0`):
+
+<add `pci=nocrs` to kernel options>
