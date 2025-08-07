@@ -221,6 +221,16 @@ code {
   border-radius: 0.25rem;
 }
 
+/* pseudo-modular jumpscare. sorry future me
+ * this stylesheet really should get overhauled x.x */
+.m-codeblock > pre {
+  padding: 0.5rem 2rem;
+  border-radius: 0.25rem;
+}
+.m-codeblock > pre > code {
+  padding: 0;
+}
+
 ::selection {
   color: var(--qx-selection-color);
   background-color: var(--qx-selection-background);
@@ -736,6 +746,11 @@ blockquote::after {
 /* emoji for internal links */
 .e-content a[href^="#"]::before, .e-content a[href^="/"]:not([href^="//"])::before, .e-content a[href^="./"]::before, .e-content a[href^="../"]::before, .e-content a[href^="https://meadwell.net"]::before, .e-content a[href^="meadwell.net"]::before {
   content: "🔆 ";
+}
+
+/* emoji for id-links (within a single page) */
+.e-content a[href^="#"]::before {
+  content: "#️⃣ ";
 }
 
 /* emoji for protocol relative URLs */
