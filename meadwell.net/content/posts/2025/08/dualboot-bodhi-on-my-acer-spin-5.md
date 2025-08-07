@@ -1,6 +1,6 @@
 ---
 title: "How I Dualboot Bodhi on My Acer Spin 5"
-description: "A complete guide to installing Bodhi Linux alongside Windows on my Acer Spin 5 laptop. Happy dualbooting!"
+description: "A complete guide to installing Bodhi Linux 7 alongside Windows on my Acer Spin 5 laptop. Happy dualbooting!"
 date: "2025-08-06"
 tags: ["posts","tech-docs"]
 params:
@@ -52,13 +52,33 @@ There are a few things to download and set up before we really get going.
 
 ### The Linux kernel
 
-Bodhi Linux 6 LTS comes with Linux kernel version 5.15 at time of writing.
+Bodhi Linux 7 LTS comes with Linux kernel version 5.15 at time of writing.
 Unfortunately, it's kinda old!
 Let's update the kernel now, and enable future updates too.
-This is not necessary if using Bodhi Linux 6 HWE,
+This is not necessary if using Bodhi Linux 7 HWE,
 which provides rolling updates for the kernel.
 
 Since I was silly and installed the LTS version, I have to enable updates now.
+
+To enable rolling updates for our kernel, we'll need to use `apt`
+to install the HWE kernel package.
+Remember to update our package list first!
+
+```bash
+sudo apt update
+sudo apt search linux-generic-hwe-22.04
+```
+
+After a reboot, our system should be up-to-date
+with the latest Bodhi HWE kernel!
+At time of writing, this package includes the Linux kernel `6.8`.
+This got my touchpad working---`5.15` must not be compatible.
+
+If, for whatever reason, the new kernel doesn't work,
+simply boot using GRUB's "Advanced options for Bodhi Linux" option
+and selecting one of the previous known-working kernels.
+Note that `5.15` might break the touchpad!
+See the section on [touchpad](#touchpad).
 
 ## Configuring Everything
 
@@ -73,13 +93,22 @@ my laptop is (almost) completely usable!!
 
 #### Touchpad
 
-For some reason, the touchpad doesn't wanna work in "I2C" mode.
+If using kernel `5.15`, the touchpad won't wanna work in "I2C" mode.
 As a temporary workaround, setting the touchpad to "PS2" rather than "I2C"
 in the UEFI settings will enable basic functionality.
 
 Another temporary workaround is to add a kernel option
-(temporarily, through the GRUB menu before boot,
-or permanently, by configuring and updating GRUB from Bodhi)
-when booting the Linux kernel (ver. `5.15.0`):
+(temporarily, through the GRUB menu before boot)
+when booting the kernel.
+Press `e` in the GRUB bootloader to edit boot options for this session.
+Find the line that includes `ro quiet splash` or similar,
+then add `pci=nocrs` as an additional option.
+If you bork something, don't panic!--
+this is just temporary; simply reboot and it should be good.
 
-<add `pci=nocrs` to kernel options>
+I started writing this touchpad section while running kernel `5.15`
+and then realized part-way that a kernel update might just fix it,
+no workaround necessary.
+Yeah, it did, lol.
+Just update the kernel.
+At time of writing, kernel `6.8.0` supports the touchpad out of the box.
