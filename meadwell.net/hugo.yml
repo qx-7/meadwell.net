@@ -39,6 +39,9 @@ markup:
       attribute:
         block: true
         title: true
+  highlight:
+    noClasses: false
+    wrapperClass: "m-codeblock"
 disableKinds:
 - rss
 outputs:
