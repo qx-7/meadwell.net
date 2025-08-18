@@ -3,48 +3,48 @@
 {{ $shelf := false }}
 {{ if .Page.Params.shelf }}{{ $shelf = .Page.Params.shelf }}{{ end }}
 
-  <article class="posts">
 
-    <main>
-      <article>
-        <header id="main-header">
-          <hgroup>
-            <h1>{{ .Title | .RenderString }}</h1>
-            <h2>in <a href="/library">Mel's Library</a>{{ if $shelf }} (<a href="/library#{{ $shelf | lower }}">{{ $shelf }}</a> shelf){{ end }}</h2>
-            {{ if .Description }}<p>{{ .Description | .RenderString }}</p>{{ end }}
-          </hgroup>
+<main class="m-article">
+  <article>
+    <header class="m-article__header">
+      <hgroup>
+        <h1 class="m-article__title">{{ .Title | .RenderString }}</h1>
+        <h2 class="m-article__subtitle">in <a href="/library">Mel's Library</a>{{ if $shelf }} (<a
+            href="/library#{{ $shelf | lower }}">{{ $shelf }}</a> shelf){{ end }}</h2>
+        {{ if .Description }}<p class="m-article__description">{{ .Description | .RenderString }}</p>{{ end }}
+      </hgroup>
 
-          {{ if .Date }}
-            {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-            {{ $dateHuman := .Date | time.Format "02 Jan 2006" }}
-            <p class="pubdate">Originally published <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
-          {{ end }}
-          <p class="permalink"><a class="button" href="{{ .Permalink }}">Permalink</a></p>
-        </header>
+      {{ if .Date }}
+      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman := .Date | time.Format "02 Jan 2006" }}
+      <p class="m-article__date">Originally published <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
+      {{ end }}
+      <p class="m-article__permalink"><a class="m-button" href="{{ .Permalink }}">Permalink</a></p>
+    </header>
 
-        <div class="e-content">
-          {{ .Content }}
-        </div>
+    <div class="m-article__content">
+      {{ .Content }}
+    </div>
 
-        <footer>
-          {{ partial "tags.html" (.GetTerms "tags") }}
-        </footer>
-      </article>
-    </main>
-
-    {{ $collection := (where .CurrentSection.Pages "Params.shelf" $shelf).ByWeight.Reverse }}
-    {{ if or ($collection.Next .) ($collection.Prev .) }}
-      <footer class="main-footer">
-        <div class="adjacentPosts">
-          {{ with $collection.Next . }}
-            <p>Next page in {{ $shelf }}: <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></p>
-          {{ end }}
-          {{ with $collection.Prev . }}
-            <p>Previous page in {{ $shelf }}: <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></p>
-          {{ end }}
-        </div>
-      </footer>
-    {{ end }}
-
+    <footer class="m-article__tags m-article__footer">
+      {{ partial "tags.html" (.GetTerms "tags") }}
+    </footer>
   </article>
+</main>
+
+{{ $collection := (where .CurrentSection.Pages "Params.shelf" $shelf).ByWeight.Reverse }}
+{{ if or ($collection.Next .) ($collection.Prev .) }}
+<footer class="m-article__footer">
+  <div class="m-article__adjacent">
+    {{ with $collection.Next . }}
+    <p>Next page in {{ $shelf }}: <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></p>
+    {{ end }}
+    {{ with $collection.Prev . }}
+    <p>Previous page in {{ $shelf }}: <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></p>
+    {{ end }}
+  </div>
+</footer>
+{{ end }}
+
+</article>
 {{ end }}

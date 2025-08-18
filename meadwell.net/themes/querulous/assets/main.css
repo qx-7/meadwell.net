@@ -258,6 +258,31 @@ body {
   color: var(--qx-footer-link-hover-color);
 }
 
+/* not to be confused with m-buttons.
+  m-button is for interactive button placement
+  m-buttons is for 88x31 images */
+.m-button {
+  --foreground-color: var(--qx-main-fore);
+  --background-color: var(--qx-midground);
+  --border-color: var(--qx-nearground);
+  list-style: none;
+  border: 1px solid var(--border-color);
+  border-radius: 0.6rem;
+  padding: 0.4rem;
+  color: var(--foreground-color);
+  background: var(--background-color);
+  text-decoration: underline;
+}
+
+.m-button:hover {
+  --foreground-color: var(--qx-main-fore);
+  --background-color: color-mix(in oklab, var(--qx-accent-fore), var(--qx-background) 70%);
+  --border-color: var(--qx-main-back);
+  color: var(--foreground-color);
+  background: var(--background-color);
+  border-color: var(--border-color);
+}
+
 .m-buttons {
   gap: 0.2rem;
 }
@@ -265,4 +290,156 @@ body {
 .m-buttons__container {
   flex-wrap: wrap;
   gap: 0.4rem;
+}
+
+/* main article stuff */
+
+.m-article {
+  --title-color: var(--qx-main-near);
+  --subtitle-color: var(--qx-main-fore);
+  --subtitle-link-color: var(--qx-main-mid);
+  --subtitle-hover-color: var(--qx-main-fore);
+  --description-color: var(--qx-accent-near);
+  --description-size: 15;
+  --date-size: 13;
+  --date-color: var(--qx-main-near);
+  --content-size: 17;
+  --content-color: var(--qx-foreground);
+  --h2-color: var(--qx-main-mid);
+  --h3-color: var(--qx-accent-far);
+  --h4-color: var(--qx-main-near);
+  --h5-color: var(--qx-main-fore);
+  --h6-color: var(--qx-foreground);
+  --footer-size: 16;
+  --footer-color: var(--qx-main-fore);
+  --footer-link-color: var(--qx-accent-near);
+  --footer-hover-color: var(--qx-accent-fore);
+  --tags-size: 17;
+}
+
+.m-article__title {
+  font-family: var(--qx-sans);
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--title-color);
+  margin: 1.4rem 0 0.5rem 0;
+}
+
+.m-article__subtitle {
+  font-family: var(--qx-sans);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--subtitle-color);
+  margin: 0 0 0.5rem 0;
+}
+
+.m-article__subtitle a {
+  color: var(--subtitle-link-color);
+}
+
+.m-article__subtitle a:hover {
+  color: var(--subtitle-hover-color);
+}
+
+.m-article__description {
+  font-weight: 500;
+  font-size: calc(var(--description-size) * var(--qx-unit-text));
+  color: var(--description-color);
+  margin: calc(var(--description-size) * var(--qx-unit-text) * 0.6) 0 0 0;
+}
+
+.m-article__date {
+  font-family: var(--qx-serif);
+  font-weight: 700;
+  font-size: calc(var(--date-size) * var(--qx-unit-text));
+  color: var(--date-color);
+  margin: 0.6rem 0 0 0;
+}
+
+.m-article__permalink {
+  margin: 0.4rem 0;
+  font-family: var(--qx-mono);
+  font-weight: 700;
+}
+
+.m-article__content {
+  line-height: calc(1.35em + 0.75vw);
+  font-size: calc(var(--content-size) * var(--qx-unit-text));
+  color: var(--content-color);
+}
+
+.m-article__content p {
+  margin: calc(0.6em + 0.5vw) 0;
+}
+
+.m-article__content > p:not(:first-child) {
+  text-indent: 3rem;
+}
+
+.m-article__content h2 {
+  font-weight: 800;
+  font-size: 1.6em;
+  margin: 1.6rem 0 0.6rem 0;
+  color: var(--h2-color);
+}
+
+.m-article__content h3 {
+  font-weight: 700;
+  font-size: 1.45em;
+  margin: 1.3rem 0 0.5rem 0;
+  color: var(--h3-color);
+}
+
+.m-article__content h4 {
+  font-weight: 600;
+  font-size: 1.3em;
+  margin: 1.2rem 0 0.4rem 0;
+  color: var(--h4-color);
+}
+
+.m-article__content h5 {
+  font-weight: 700;
+  font-size: 1.15em;
+  margin: 1.2rem 0 0.4rem 0;
+  color: var(--h5-color);
+}
+
+.m-article__content h6 {
+  font-weight: 600;
+  font-size: 1.15em;
+  margin: 1.2rem 0 0.4rem 0;
+  color: var(--h6-color);
+}
+
+.m-article__footer {
+  margin: 0.8rem 0;
+  font-weight: 600;
+  line-height: 1.5em;
+  font-size: calc(var(--footer-size) * var(--qx-unit-text));
+  color: var(--footer-color);
+}
+
+.m-article__footer a {
+  color: var(--footer-link-color);
+}
+
+.m-article__footer a:hover {
+  color: var(--footer-hover-color);
+}
+
+.m-tags {
+  font-size: calc(var(--tags-size) * var(--qx-unit-text));
+}
+
+.m-tags__tag {
+  font-family: var(--qx-mono);
+  font-weight: 700;
+}
+
+.m-tags__tag::before {
+  content: "#";
+}
+
+.m-tags__label {
+  display: inline;
 }

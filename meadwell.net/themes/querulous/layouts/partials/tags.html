@@ -1,5 +1,6 @@
-<ul class="tags">
+<div class="m-tags">
+  <p class="m-tags__label">Tags:</p>
   {{ range . }}
-    <a class="button" href="{{ .RelPermalink }}"><li class="tag">{{ .LinkTitle | lower }}</li></a>
+    <a class="m-tags__tag m-button" href="{{ .RelPermalink }}">{{ .LinkTitle | lower }}</a>
   {{ end }}
-</ul>
+</div>

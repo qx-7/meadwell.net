@@ -1,14 +1,16 @@
 {{ define "main" }}
-  <main>
-    <article>
-      {{ if .Title }}
-        <header id="main-header">
-          <hgroup>
-            <h1>{{ .Title | .RenderString }}</h1>
-          </hgroup>
-        </header>
-      {{ end }}
+<main class="m-article">
+  <article>
+    {{ if .Title }}
+    <header class="m-article__header">
+      <hgroup>
+        <h1 class="m-article__title">{{ .Title | .RenderString }}</h1>
+      </hgroup>
+    </header>
+    {{ end }}
+    <div class="m-article__content">
       {{ .Content }}
-    </article>
-  </main>
+    </div>
+  </article>
+</main>
 {{ end }}
