@@ -6,11 +6,15 @@
 ![badge for HTML5](https://img.shields.io/badge/HTML5-tomato?logo=html5&logoColor=white)
 ![badge for CSS3](https://img.shields.io/badge/CSS3-tomato?logo=css3&logoColor=white)
 
-README updated 2025-05-06
+README updated 2025-09-15
 
 ## About
 
 Hi there, traveller! These are the source files for [my personal site at meadwell.net](https://meadwell.net). Have a gander!
+
+## To-do
+
+- [ ] **2025-09-15**: this site/theme makes liberal use of `<article>` elements; see [this MDN page on `<article>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/article)
 
 ## Dependencies
 
@@ -31,7 +35,10 @@ Made for [Hugo](https://gohugo.io/), everyone's favourite static site generator.
 
 Unless otherwise noted, all source files are copyright 2024–2025 by Mel Meadwell.
 
-The feeds on my site are handled beautifully by the [hugo-feeds](https://codeberg.org/yelosan/hugo-feeds) module, copyright by [Yahuhanan Yukiya Sèsè Cuneta](https://youronly.one/), licensed under [MIT](https://github.com/qx-7/meadwell.net/blob/main/meadwell.net/themes/hugo-feeds/LICENSE.markdown). See [./meadwell.net/themes/hugo-feeds](https://github.com/qx-7/meadwell.net/blob/main/meadwell.net/themes/hugo-feeds).
+The feeds on my site are handled beautifully by the [hugo-feeds module](https://codeberg.org/yelosan/hugo-feeds),
+copyright by [Yahuhanan Yukiya Sèsè Cuneta](https://youronly.one/),
+licensed under [MIT](https://github.com/qx-7/meadwell.net/blob/main/meadwell.net/themes/hugo-feeds/LICENSE.markdown).
+See [this repo's copy of hugo-feeds](https://github.com/qx-7/meadwell.net/blob/main/meadwell.net/themes/hugo-feeds).
 
 ## License
 
