@@ -24,11 +24,12 @@
 
             <div class="m-list__container-contents">
               {{ range (.Pages.GroupByDate "January") }}
-                {{ $moCurrent := .Key }}
+                {{ $moCurrent := .Key | lower }}
+                {{ $moAnchor := printf "%s-%s" $yearCurrent $moCurrent }}
                 {{ $moSize := .Pages.Len }}
                 {{ if (where .Pages "Section" $section) }}
                   <div class="m-list__container">
-                    <h3 class="m-list__container-title m-list__container-subtitle" id="{{ $moCurrent | lower }}">{{ $moCurrent }}</h3>
+                    <h3 class="m-list__container-title m-list__container-subtitle" id="{{ $moAnchor }}">{{ $moCurrent | title }}</h3>
 
                     <div class="m-list__container-contents">
                       {{ range .Pages }}
