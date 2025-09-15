@@ -375,6 +375,10 @@ body {
   font-weight: 700;
 }
 
+.m-article__permalink > a::before {
+  content: "🔗 ";
+}
+
 .m-article__content {
   line-height: calc(1.35em + 0.75vw);
   font-size: calc(var(--content-size) * var(--qx-unit-text));
