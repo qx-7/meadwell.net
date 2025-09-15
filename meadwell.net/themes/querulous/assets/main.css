@@ -689,4 +689,26 @@ body {
 .h-fancy-links a[href^="mailto:"]::before {
   content: "📧";
 }
+
+/* overrides fancy links for markdown headings.
+ * we already generate an anchor link for each;
+ * see querulous/layouts/_markup/render-heading.html */
+.h-fancy-links a.h-heading__anchor::before {
+  content: "";
+}
 /* --- END FANCY LINKS --- */
+
+/* --- BEGIN ID ANCHOR (HEADING LINKS, ETC.) --- */
+.h-heading {
+  --heading-anchor-color: color-mix(in oklab, var(--qx-accent-back), var(--qx-background) 50%);
+  --heading-anchor-hover-color: var(--qx-accent-far);
+}
+
+.h-heading__anchor {
+  color: var(--heading-anchor-color);
+}
+
+.h-heading:hover {
+  --heading-anchor-color: var(--heading-anchor-hover-color);
+}
+/* --- END ID ANCHOR --- */
