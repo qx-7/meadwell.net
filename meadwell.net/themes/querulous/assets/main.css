@@ -303,6 +303,8 @@ body {
   --date-color: var(--qx-main-near);
   --content-size: 17;
   --content-color: var(--qx-foreground);
+  --link-color: var(--qx-accent-mid);
+  --link-hover-color: var(--qx-accent-fore);
   --h2-color: var(--qx-main-mid);
   --h3-color: var(--qx-accent-far);
   --h4-color: var(--qx-main-near);
@@ -374,6 +376,15 @@ body {
   text-indent: 3rem;
 }
 
+.m-article__content > p a {
+  color: var(--link-color);
+}
+
+.m-article__content> p a:hover {
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+
 .m-article__content h2 {
   font-weight: 800;
   font-size: 1.6em;
@@ -414,8 +425,17 @@ body {
   color: var(--content-color);
 }
 
-.m-article__home p {
+.m-article__home > p {
   margin: calc(0.6em + 0.5vw) 0;
+}
+
+.m-article__home > p a {
+  color: var(--link-color);
+}
+
+.m-article__home > p a:hover {
+  color: var(--link-hover-color);
+  text-decoration: none;
 }
 
 .m-article__home h2 {
