@@ -1,29 +1,32 @@
 {{ define "main" }}
-<main>
+<main class="m-article">
   <article>
-    <header id="main-header">
+    <header class="m-article__header">
       <hgroup>
-        <h1>{{ .Title | .RenderString }}</h1>
-        {{ if .Description }}<p>{{ .Description | .RenderString }}</p>{{ end }}
+        <h1 class="m-article__title">{{ .Title | .RenderString }}</h1>
+        {{ if .Description }}<p class="m-article__description">{{ .Description | .RenderString }}</p>{{ end }}
       </hgroup>
     </header>
-    {{ .Content }}
-    <article id="list">
+    <div class="m-article__home">
+      {{ .Content }}
+    </div>
+    <article class="m-list">
       {{ range .Site.Pages.GroupByParam "shelf" }}
-        <div class="list-container">
-          <h2 class="list-heading" id="{{ .Key | lower }}">{{ .Key }}</h2>
-          <div class="list-group">
+        <div class="m-list__container">
+          {{ $anchor := .Key | lower | replaceRE `\s` "_" }}
+          <h2 class="m-list__container-title" id="{{ $anchor }}">{{ .Key }}</h2>
+          <div class="m-list__container-contents">
             {{ range .Pages }}
-              <div class="list-item">
-                <a href="{{ .RelPermalink }}">
-                  <article>
-                    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-                    {{ $dateHuman := .Date | time.Format "02 Jan 06" }}
-                    <h4 class="list-title list-heading">{{ .Title | .RenderString }}</h4>
-                    <p>{{ .Description | .RenderString }}</p>
-                    <p><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
-                  </article>
-                </a>
+              <div class="m-list__item">
+                <article>
+                  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+                  {{ $dateHuman := .Date | time.Format "02 Jan 06" }}
+                  <a class="m-list__item-link" href="{{ .RelPermalink }}">
+                    <h4 class="m-list__item-title">{{ .Title | .RenderString }}</h4>
+                  </a>
+                  <p class="m-list__item-description">{{ .Description | .RenderString }}</p>
+                  <p class="m-list__item-date"><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
+                </article>
               </div>
             {{ end }}
           </div>

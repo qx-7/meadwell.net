@@ -1,48 +1,48 @@
 {{ define "main" }}
-
-<main>
+<main class="m-article">
   <article>
-
-    <header id="main-header">
+    <header class="m-article__header">
       <hgroup>
-        <h1>{{ .Title | .RenderString }}</h1>
-        {{ if .Description }}<p>{{ .Description | .RenderString }}</p>{{ end }}
+        <h1 class="m-article__title">{{ .Title | .RenderString }}</h1>
+        {{ if .Description }}<p class="m-article__description">{{ .Description | .RenderString }}</p>{{ end }}
       </hgroup>
     </header>
 
+    <div class="m-article__home">
     {{ .Content }}
+    </div>
 
-    <article id="list">
+    <article class="m-list">
 
       {{ $section := .Page.Section }}
 
       {{ range (.Page.RegularPages.GroupByDate "2006") }}
         {{ if (where .Pages "Section" $section) }}
-          <div class="list-container">
+          <div class="m-list__container">
             {{ $yearCurrent := .Key }}
-            <h2 class="list-heading">{{ $yearCurrent }}</h2>
+            <h2 class="m-list__container-title" id="{{ $yearCurrent }}">{{ $yearCurrent }}</h2>
 
-            <div class="list-group">
+            <div class="m-list__container-contents">
               {{ range (.Pages.GroupByDate "January") }}
                 {{ $moCurrent := .Key }}
                 {{ $moSize := .Pages.Len }}
                 {{ if (where .Pages "Section" $section) }}
-                  <div class="list-container">
-                    <h3 class="list-heading">{{ $moCurrent }}</h3>
+                  <div class="m-list__container">
+                    <h3 class="m-list__container-title m-list__container-subtitle" id="{{ $moCurrent | lower }}">{{ $moCurrent }}</h3>
 
-                    <div class="list-group">
+                    <div class="m-list__container-contents">
                       {{ range .Pages }}
 
-                        <div class="list-item">
-                          <a href="{{ .RelPermalink }}">
-                            <article>
-                              {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-                              {{ $dateHuman := .Date | time.Format "02 Jan 2006" }}
-                              <h4 class="list-title list-heading">{{ .Title | .RenderString }}</h4>
-                              <p>{{ .Description | .RenderString }}</p>
-                              <p><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
-                            </article>
-                          </a>
+                        <div class="m-list__item">
+                          <article>
+                            {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+                            {{ $dateHuman := .Date | time.Format "02 Jan 2006" }}
+                            <a class="m-list__item-link" href="{{ .RelPermalink }}">
+                              <h4 class="m-list__item-title">{{ .Title | .RenderString }}</h4>
+                            </a>
+                            <p class="m-list__item-description">{{ .Description | .RenderString }}</p>
+                            <p class="m-list__item-date"><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
+                          </article>
                         </div>
 
                       {{ end }}

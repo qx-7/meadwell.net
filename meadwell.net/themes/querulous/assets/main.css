@@ -461,6 +461,102 @@ body {
   color: var(--footer-hover-color);
 }
 
+/* --- BEGIN LIST --- */
+.m-list {
+  --container-title-size: 24;
+  --container-title-color: var(--qx-main-fore);
+  --container-subtitle-size: 20;
+  --container-subtitle-color: var(--qx-main-mid);
+  --item-radius: 1rem;
+  --item-color: none;
+  --item-hover-color: var(--qx-midground);
+  --item-title-size: 22;
+  --item-title-color: var(--qx-accent-mid);
+  --item-title-hover-color: var(--qx-accent-fore);
+  --item-title-decoration: underline;
+  --item-description-size: 15;
+  --item-date-size: 15;
+  --item-date-color: var(--qx-accent-fore);
+  --item-date-hover-color: color-mix(in oklab, var(--qx-accent-fore), var(--qx-foreground) 50%);
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+}
+
+.m-list__container {
+  display: flex;
+  flex-flow: column;
+}
+
+.m-list__container-title {
+  font-family: var(--qx-serif);
+  font-size: calc(var(--container-title-size) * var(--qx-unit-text));
+  font-weight: 600;
+  color: var(--container-title-color);
+  margin: 0.2rem 0;
+}
+
+.m-list__container-subtitle {
+  font-size: calc(var(--container-subtitle-size) * var(--qx-unit-text));
+  color: var(--container-subtitle-color);
+}
+
+.m-list__container-contents {
+  display: flex;
+  flex-flow: column;
+  flex: 8;
+  gap: 0.4rem;
+  padding-left: 2rem;
+}
+
+.m-list__item {
+  position: relative;
+  border-radius: var(--item-radius);
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.m-list__item:hover {
+  background-color: var(--item-hover-color);
+  --item-title-color: var(--item-title-hover-color);
+  --item-title-decoration: none;
+  --item-date-color: var(--item-date-hover-color);
+}
+
+.m-list__item-title {
+  color: var(--item-title-color);
+  text-decoration: var(--item-title-decoration);
+  font-size: calc(var(--item-title-size) * var(--qx-unit-text));
+  font-family: var(--qx-sans);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.m-list__item-link {
+  text-decoration: none;
+}
+
+.m-list__item-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.m-list__item-description {
+  font-size: calc(var(--item-description-size) * var(--qx-unit-text));
+}
+
+.m-list__item-date {
+  font-size: calc(var(--item-date-size) * var(--qx-unit-text));
+  color: var(--item-date-color);
+}
+/* --- END LIST --- */
+
 .m-tags {
   font-size: calc(var(--tags-size) * var(--qx-unit-text));
 }
