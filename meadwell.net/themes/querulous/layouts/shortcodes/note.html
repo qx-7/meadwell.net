@@ -13,7 +13,7 @@ Parameters may both be left empty.
 {{ end }}
 {{ $content = .Inner | strings.TrimSpace }}
 
-<div class="note">
-  {{ if $title }}<p><strong>{{ $title | .Page.RenderString }}</strong></p>{{ end }}
+<div class="m-note">
+  {{ if $title }}<p><strong class="m-note__title">{{ $title | .Page.RenderString }}</strong></p>{{ end }}
   {{if $content }}{{ $content | .Page.RenderString (dict "display" "block") }}{{ end }}
 </div>

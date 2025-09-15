@@ -21,7 +21,7 @@ Is your life just a little bit too boring and same-y lately?
 
 Check out my [posts](/posts), where I publish all sorts of neat and thoughtful stuff!
 
-{{< note "Featured post:" >}}**[On the Loneliness Epidemic and Being a Woman Online](/2025/02/post-on-the-loneliness-epidemic-and-being-a-woman-online)**
+{{< note "Featured post: [On the Loneliness Epidemic and Being a Woman Online](/2025/02/post-on-the-loneliness-epidemic-and-being-a-woman-online)" >}}
 
 In which I ramble about loneliness, marginalization, and my transfem experience with in-game chat
 
