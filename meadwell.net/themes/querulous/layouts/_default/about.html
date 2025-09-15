@@ -1,21 +1,21 @@
 {{ define "main" }}
-<main>
+<main class="m-article">
 
-  <article class="h-entry">
-    <header id="main-header">
+  <article>
+    <header class="m-article__header">
       <hgroup>
-        <h1 class="p-name">{{ .Title | .RenderString }}</h1>
-        {{ if .Description }}<p class="p-summary">{{ .Description | .RenderString }}</p>{{ end }}
+        <h1 class="m-article__title">{{ .Title | .RenderString }}</h1>
+        {{ if .Description }}<p class="m-article__description">{{ .Description | .RenderString }}</p>{{ end }}
       </hgroup>
 
       {{ if .Date }}
         {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
         {{ $dateHuman := .Date | time.Format "02 Jan 2006" }}
-        <p class="pubdate">Updated <time class="dt-published" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
+        <p class="m-article__date">Updated <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
       {{ end }}
     </header>
 
-    <div class="e-content">
+    <div class="m-article__home">
     {{ .Content }}
     </div>
   </article>
