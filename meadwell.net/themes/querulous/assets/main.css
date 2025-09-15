@@ -554,3 +554,35 @@ body {
   color: var(--title-hover-color);
   text-decoration: none;
 }
+
+/* --- BEGIN QUIPS --- */
+.m-quip {
+  --background: var(--qx-midground);
+  --font-size: 13;
+  --time-size: 12;
+  --content-size: 14;
+  display: flex;
+  flex-flow: row;
+  gap: 0.2rem;
+  background-color: var(--background);
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+  font-size: calc(var(--font-size) * var(--qx-unit-text));
+  margin: 0.4rem 0;
+}
+
+.m-quip__time {
+  font-weight: 900;
+  font-size: calc(var(--time-size) * var(--qx-unit-text));
+  font-family: var(--qx-mono);
+  flex: 0 0 7em;
+}
+
+.m-quip__content {
+  font-weight: 500;
+  font-size: calc(var(--content-size) * var(--qx-unit-text));
+  font-family: var(--qx-mono);
+  flex: 1 content;
+}
+/* --- END QUIPS --- */
+

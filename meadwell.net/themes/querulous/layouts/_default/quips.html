@@ -1,23 +1,23 @@
 {{ define "main" }}
-<main>
-  <article class="h-feed">
-    <header id="main-header">
+<main class="m-article">
+  <article class="h-feed m-article__quip-container">
+    <header class="m-article__header">
       <hgroup>
-        <h1 class="p-name">{{ .Title | .RenderString }}</h1>
+        <h1 class="p-name m-article__title">{{ .Title | .RenderString }}</h1>
       </hgroup>
     </header>
-    <div class="p-summary">
+    <div class="p-summary m-article__content h-fancy-links">
       {{ .Content }}
     </div>
 
     {{ range sort .Site.Data.quips "t" "desc" }}
-      <article class="h-entry">
-        {{ $dateMachine := .t | time.Format "2006-01-02T15:04:05-07:00" }}
-        {{ $dateHuman := .t | time.Format "2006-Jan-02 15:04" }}
-        {{ $dateURL := .t | time.Format "2006-01-02-1504" }}
-        <p class="quip-t" id="{{ $dateURL }}"><a class="u-url" href="{{ .Site.BaseURL }}#{{ $dateURL }}"><time class="dt-published" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></a></p>
-        <p class="quip-q">{{ .q }}</p>
-      </article>
+    <article class="h-entry m-quip">
+      {{ $dateMachine := .t | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman := .t | time.Format "2006-Jan-02 15:04" }}
+      {{ $dateURL := .t | time.Format "2006-01-02-1504" }}
+      <p class="m-quip__time" id="{{ $dateURL }}"><a class="u-url" href="{{ .Site.BaseURL }}#{{ $dateURL }}"><time class="dt-published" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></a></p>
+      <p class="m-quip__content">{{ .q }}</p>
+    </article>
     {{ end }}
   </article>
 </main>
