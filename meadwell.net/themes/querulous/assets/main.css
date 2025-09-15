@@ -420,9 +420,37 @@ body {
   color: var(--h6-color);
 }
 
+/* --- FANCY LINKS --- */
+.m-article__content > p a:not([href^="#"]):not([href^="/"]):not([href^="./"]):not([href^="../"]):not([href^="mailto:"])::before,
+.m-article__content > p a[href^="//"] {
+  content: "🌐";
+}
+
+.m-article__content > p a[href^="/"]:not([href^="//"])::before,
+.m-article__content > p a[href^="./"]::before,
+.m-article__content > p a[href^="../"]::before {
+  content: "🔆";
+}
+
+.m-article__content > p a[href^="#"]::before {
+  content: "#️⃣";
+}
+
+.m-article__content > p a[href^="mailto:"]::before {
+  content: "📧";
+}
+/* --- fancy links end --- */
+
 .m-article__home {
   font-size: calc(var(--content-size) * var(--qx-unit-text));
   color: var(--content-color);
+}
+
+.m-article__home h2 {
+  font-weight: 800;
+  font-size: 1.6em;
+  margin: 1.6rem 0 0.6rem 0;
+  color: var(--h2-color);
 }
 
 .m-article__home > p {
@@ -438,12 +466,26 @@ body {
   text-decoration: none;
 }
 
-.m-article__home h2 {
-  font-weight: 800;
-  font-size: 1.6em;
-  margin: 1.6rem 0 0.6rem 0;
-  color: var(--h2-color);
+/* --- FANCY LINKS --- */
+.m-article__home > p a:not([href^="#"]):not([href^="/"]):not([href^="./"]):not([href^="../"]):not([href^="mailto:"])::before,
+.m-article__home > p a[href^="//"] {
+  content: "🌐";
 }
+
+.m-article__home > p a[href^="/"]:not([href^="//"])::before,
+.m-article__home > p a[href^="./"]::before,
+.m-article__home > p a[href^="../"]::before {
+  content: "🔆";
+}
+
+.m-article__home > p a[href^="#"]::before {
+  content: "#️⃣";
+}
+
+.m-article__home > p a[href^="mailto:"]::before {
+  content: "📧";
+}
+/* --- fancy links end --- */
 
 .m-article__footer {
   margin: 0.8rem 0;
