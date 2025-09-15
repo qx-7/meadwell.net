@@ -478,6 +478,7 @@ body {
   display: inline;
 }
 
+/* --- BEGIN NOTE --- */
 .m-note {
   --font-size: calc(0.92 * 17); /* used to be 0.92em. does this hack suck y/n */
   --size: 0.25rem;
@@ -504,14 +505,17 @@ body {
   /* actually the defaults are all fine i think */
 }
 
+.m-note > p > a,
 .m-note__title > a { /* > is inescapable */
   color: var(--title-link-color);
 }
 
+.m-note > p > a:hover,
 .m-note__title > a:hover {
   color: var(--title-hover-color);
   text-decoration: none;
 }
+/* --- END NOTE --- */
 
 /* --- BEGIN QUIPS --- */
 .m-quip {
