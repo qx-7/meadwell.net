@@ -634,6 +634,8 @@ body {
   --background: var(--qx-midground);
   --font-size: 13;
   --time-size: 12;
+  --time-color: var(--qx-accent-near);
+  --time-hover-color: var(--qx-accent-fore);
   --content-size: 14;
   display: flex;
   flex-flow: row;
@@ -650,6 +652,14 @@ body {
   font-size: calc(var(--time-size) * var(--qx-unit-text));
   font-family: var(--qx-mono);
   flex: 0 0 7em;
+}
+
+.m-quip__time > a {
+  color: var(--time-color);
+}
+
+.m-quip__time > a:hover {
+  color: var(--time-hover-color);
 }
 
 .m-quip__content {
