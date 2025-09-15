@@ -1,11 +1,9 @@
+/* --- BEGIN VARIABLES --- */
 :root {
   /* FONT */
-  /*
   font-size: calc(12px + 0.3vw);
   --qx-unit-text: calc(1px + 0.013vw);
-  */
-  font-size: 15px;
-  --qx-unit-text: 1.2px;
+
   --qx-sans: Lexend, sans-serif;
   --qx-serif: Vollkorn, serif;
   --qx-mono: Inconsolata, monospace;
@@ -94,7 +92,9 @@
     color: #99e9f0;
   }
 }
+/* --- END VARIABLES --- */
 
+/* --- BEGIN MISCELLANEOUS --- */
 * {
   margin: 0;
   padding: 0;
@@ -136,7 +136,9 @@ body {
 .l-flex--row {
   flex-direction: row;
 }
+/* --- END MISCELLANEOUS --- */
 
+/* --- BEGIN NAVBAR --- */
 .m-navbar {
   --qx-menu-link-color: var(--qx-main-mid);
   --qx-menu-link-hover: var(--qx-main-fore);
@@ -175,7 +177,10 @@ body {
   background-color: var(--qx-menu-background-hover);
   --qx-menu-link-color: var(--qx-menu-link-hover);
 }
+/* --- END NAVBAR --- */
 
+/* --- BEGIN SITE HEADER --- */
+/* not to be confused with the site banner */
 .m-site-header {
   --qx-border-width: 0.15rem;
   --qx-border-color: var(--qx-main-near);
@@ -183,7 +188,9 @@ body {
   border-bottom: var(--qx-border-width) solid var(--qx-border-color);
   gap: 1rem;
 }
+/* --- END SITE HEADER --- */
 
+/* --- BEGIN SITE BANNER --- */
 .m-site-banner {
   --qx-site-title-color: var(--qx-accent-mid);
   --qx-site-tagline-color: var(--qx-main-far);
@@ -233,7 +240,9 @@ body {
 .m-site-banner__status-link:hover {
   --qx-status-link-color: var(--qx-status-hover-color);
 }
+/* --- END SITE BANNER --- */
 
+/* --- BEGIN SITE FOOTER --- */
 .m-site-footer {
   --qx-border-width: 0.15rem;
   --qx-border-color: var(--qx-main-near);
@@ -255,7 +264,9 @@ body {
 .m-site-footer a:hover {
   color: var(--qx-footer-link-hover-color);
 }
+/* --- END SITE FOOTER --- */
 
+/* --- BEGIN BUTTON --- */
 /* not to be confused with m-buttons.
   m-button is for interactive button placement
   m-buttons is for 88x31 images */
@@ -280,7 +291,9 @@ body {
   background: var(--background-color);
   border-color: var(--border-color);
 }
+/* --- END BUTTON --- */
 
+/* --- BEGIN 88x31 BUTTONS --- */
 .m-buttons {
   gap: 0.2rem;
 }
@@ -289,9 +302,9 @@ body {
   flex-wrap: wrap;
   gap: 0.4rem;
 }
+/* --- END BUTTONS --- */
 
-/* main article stuff */
-
+/* --- BEGIN ARTICLE --- */
 .m-article {
   --title-color: var(--qx-main-near);
   --subtitle-color: var(--qx-main-fore);
@@ -460,6 +473,7 @@ body {
 .m-article__footer a:hover {
   color: var(--footer-hover-color);
 }
+/* --- END ARTICLE --- */
 
 /* --- BEGIN LIST --- */
 .m-list {
@@ -557,6 +571,7 @@ body {
 }
 /* --- END LIST --- */
 
+/* --- BEGIN TAGS --- */
 .m-tags {
   font-size: calc(var(--tags-size) * var(--qx-unit-text));
 }
@@ -573,6 +588,7 @@ body {
 .m-tags__label {
   display: inline;
 }
+/* --- END TAGS ---*/
 
 /* --- BEGIN NOTE --- */
 .m-note {
