@@ -420,27 +420,6 @@ body {
   color: var(--h6-color);
 }
 
-/* --- FANCY LINKS --- */
-.m-article__content > p a:not([href^="#"]):not([href^="/"]):not([href^="./"]):not([href^="../"]):not([href^="mailto:"])::before,
-.m-article__content > p a[href^="//"] {
-  content: "🌐";
-}
-
-.m-article__content > p a[href^="/"]:not([href^="//"])::before,
-.m-article__content > p a[href^="./"]::before,
-.m-article__content > p a[href^="../"]::before {
-  content: "🔆";
-}
-
-.m-article__content > p a[href^="#"]::before {
-  content: "#️⃣";
-}
-
-.m-article__content > p a[href^="mailto:"]::before {
-  content: "📧";
-}
-/* --- fancy links end --- */
-
 .m-article__home {
   font-size: calc(var(--content-size) * var(--qx-unit-text));
   color: var(--content-color);
@@ -465,27 +444,6 @@ body {
   color: var(--link-hover-color);
   text-decoration: none;
 }
-
-/* --- FANCY LINKS --- */
-.m-article__home > p a:not([href^="#"]):not([href^="/"]):not([href^="./"]):not([href^="../"]):not([href^="mailto:"])::before,
-.m-article__home > p a[href^="//"] {
-  content: "🌐";
-}
-
-.m-article__home > p a[href^="/"]:not([href^="//"])::before,
-.m-article__home > p a[href^="./"]::before,
-.m-article__home > p a[href^="../"]::before {
-  content: "🔆";
-}
-
-.m-article__home > p a[href^="#"]::before {
-  content: "#️⃣";
-}
-
-.m-article__home > p a[href^="mailto:"]::before {
-  content: "📧";
-}
-/* --- fancy links end --- */
 
 .m-article__footer {
   margin: 0.8rem 0;
@@ -586,3 +544,23 @@ body {
 }
 /* --- END QUIPS --- */
 
+/* --- BEGIN FANCY LINKS --- */
+.h-fancy-links a:not([href^="#"]):not([href^="/"]):not([href^="./"]):not([href^="../"]):not([href^="mailto:"])::before,
+.h-fancy-links a[href^="//"] {
+  content: "🌐";
+}
+
+.h-fancy-links a[href^="/"]:not([href^="//"])::before,
+.h-fancy-links a[href^="./"]::before,
+.h-fancy-links a[href^="../"]::before {
+  content: "🔆";
+}
+
+.h-fancy-links a[href^="#"]::before {
+  content: "#️⃣";
+}
+
+.h-fancy-links a[href^="mailto:"]::before {
+  content: "📧";
+}
+/* --- END FANCY LINKS --- */
