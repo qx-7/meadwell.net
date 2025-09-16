@@ -21,9 +21,11 @@
                 <article>
                   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
                   {{ $dateHuman := .Date | time.Format "02 Jan 06" }}
-                  <a class="m-list__item-link" href="{{ .RelPermalink }}">
-                    <h4 class="m-list__item-title">{{ .Title | .RenderString }}</h4>
-                  </a>
+                  <h4 class="m-list__item-title">
+                    <a class="m-list__item-link" href="{{ .RelPermalink }}">
+                      {{ .Title | .RenderString }}
+                    </a>
+                  </h4>
                   <p class="m-list__item-description">{{ .Description | .RenderString }}</p>
                   <p class="m-list__item-date"><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
                 </article>
