@@ -4,28 +4,30 @@
      
      you should probably look into this later... */}}
 
-     <main>
+     <main class="m-article">
        <article>
-         <header id="main-header">
+         <header class="m-article__header">
            <hgroup>
-             <h1>{{ .Title }}</span></h1>
+             <h1 class="m-article__title">{{ .Title }}</h1>
            </hgroup>
          </header>
-         <div class="e-content">
+         <div class="e-content m-article__home">
            {{ .Content }}
          </div>
-         <article id="list">
-           <div class="list-group">
+         <article class="m-list">
+           <div class="m-list__container">
              {{ range .Pages.ByDate.Reverse }}
-               <div class="list-item">
-                 <a href="{{ .RelPermalink }}">
-                   <article>
-                     {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-                     {{ $dateHuman := .Date | time.Format "02 Jan 06" }}
-                     <h2 class="list-title list-heading tag">{{ .Title | lower }} ({{ .Site.Taxonomies.tags.Count (.Title | lower) }})</h2>
-                     <p><time datetime="{{ $dateMachine }}">Latest: {{ $dateHuman }}</time></p>
-                   </article>
-                 </a>
+               <div class="m-list__item">
+                 <article>
+                   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+                   {{ $dateHuman := .Date | time.Format "02 Jan 06" }}
+                   <h2 class="m-list__item-title">
+                     <a class="m-list__item-link" href="{{ .RelPermalink }}">
+                      {{ .Title | lower }} ({{ .Site.Taxonomies.tags.Count (.Title | lower) }})
+                     </a>
+                   </h2>
+                   <p class="m-list__item-date"><time datetime="{{ $dateMachine }}">Latest: {{ $dateHuman }}</time></p>
+                 </article>
                </div>
              {{ end }}
            </div>
