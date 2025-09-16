@@ -462,6 +462,45 @@ body {
   text-decoration: none;
 }
 
+.m-article__content blockquote {
+  --font-size: calc(0.92 * 17); /* main text is 17 */
+  --bar-width: 0.25rem;
+  --bar-color: var(--qx-accent-near);
+  --background: var(--qx-midground);
+  background: var(--background);
+  border-left: var(--bar-width) solid var(--bar-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.6rem 0.4rem;
+  margin: 0.6rem 0;
+  border-radius: var(--bar-width);
+  font-size: calc(var(--font-size) * var(--qx-unit-text));
+  padding-left: 3rem;
+  padding-right: 1rem;
+}
+
+.m-article__content blockquote::before {
+  content: "“";
+  left: -2rem;
+  top: 2rem;
+}
+
+.m-article__content blockquote::after {
+  content: "”";
+  text-align: end;
+  right: -0.4rem;
+  bottom: -0.5rem;
+  margin-top: 0.15rem;
+}
+
+.m-article__content blockquote::before,
+.m-article__content blockquote::after {
+  font-size: 4rem;
+  position: relative;
+  line-height: 1rem;
+}
+
 .m-article__footer {
   margin: 0.8rem 0;
   font-weight: 600;
