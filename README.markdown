@@ -15,6 +15,7 @@ Hi there, traveller! These are the source files for [my personal site at meadwel
 ## To-do
 
 - [ ] **2025-09-15**: this site/theme makes liberal use of `<article>` elements; see [this MDN page on `<article>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/article)
+- [ ] **2025-09-15**: all tag-related pages are broken; see [tags](https://meadwell.net/tags/) and individual tag pages (i.e., [#journals](https://meadwell.net/tags/journals/))
 
 ## Dependencies
 
