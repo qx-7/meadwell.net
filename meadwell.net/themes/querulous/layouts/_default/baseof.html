@@ -5,7 +5,9 @@
   </head>
   <body class="l-flex--column">
     {{ partial "header.html" . }}
+    <hr class="m-border" />
     {{ block "main" . }}{{ end }}
+    <hr class="m-border" />
     {{ partialCached "footer.html" . }}
   </body>
 </html>
